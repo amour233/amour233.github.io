@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="LYL.">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="网页链接 Level 0打开如下，在下面输入框输入a查看一下HTML标签的属性  根据下面显示的标签属性可以构造如下的语句,前面引号和括号用来闭合语句的，后面用来注释后面的语句 1&quot;&gt; &lt;!--  然后在中间插入如下语句就行了 1&lt;script&gt;prompt(1)&lt;&#x2F;script&gt;   Level 1进入题目情况如下，可以发现它利用正则表达式，过滤了尖">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XSS-game">
+<meta property="og:url" content="https://amour233.github.io/2022/11/04/XSS-game/index.html">
+<meta property="og:site_name" content="LYL">
+<meta property="og:description" content="网页链接 Level 0打开如下，在下面输入框输入a查看一下HTML标签的属性  根据下面显示的标签属性可以构造如下的语句,前面引号和括号用来闭合语句的，后面用来注释后面的语句 1&quot;&gt; &lt;!--  然后在中间插入如下语句就行了 1&lt;script&gt;prompt(1)&lt;&#x2F;script&gt;   Level 1进入题目情况如下，可以发现它利用正则表达式，过滤了尖">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104163509138.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104164555784.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104164818830.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104170033489.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104171318960.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104173157125.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104173309714.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104173940172.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104201809595.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104205048567.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104205610954.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104210416924.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104210503280.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221104212651726.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105152951303.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105153727669.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105153937698.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105160057903.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105162608027.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105164243826.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105164455058.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105164743158.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105165049603.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221105171520955.png">
+<meta property="article:published_time" content="2022-11-04T09:47:30.000Z">
+<meta property="article:modified_time" content="2022-11-05T09:15:29.892Z">
+<meta property="article:author" content="LYL.">
+<meta property="article:tag" content="ctf">
+<meta property="article:tag" content="网络安全">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://amour233.github.io/img/image-20221104163509138.png">
+  
+  
+  
+  <title>XSS-game - LYL</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"amour233.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="XSS-game"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-11-04 17:47" pubdate>
+          2022年11月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          22 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">XSS-game</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><a target="_blank" rel="noopener" href="https://prompt.ml/0">网页链接</a></p>
+<h4 id="Level-0"><a href="#Level-0" class="headerlink" title="Level 0"></a>Level 0</h4><p>打开如下，在下面输入框输入a查看一下HTML标签的属性</p>
+<p><img src="/../img/image-20221104163509138.png" srcset="/img/loading.gif" lazyload></p>
+<p>根据下面显示的标签属性可以构造如下的语句,前面引号和括号用来闭合语句的，后面用来注释后面的语句</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">&quot;&gt; &lt;!--</span><br></code></pre></td></tr></table></figure>
+
+<p>然后在中间插入如下语句就行了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;script&gt;<span class="hljs-title function_">prompt</span>(<span class="hljs-number">1</span>)&lt;/script&gt;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221104164555784.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-1"><a href="#Level-1" class="headerlink" title="Level 1"></a>Level 1</h4><p>进入题目情况如下，可以发现它利用正则表达式，过滤了尖括号</p>
+<p><img src="/../img/image-20221104164818830.png" srcset="/img/loading.gif" lazyload></p>
+<p>js正则表达式，/?: 0个或1个&#x2F;，[ ^ &gt; ]  +：代表的是除了&gt;这个字符，其它的字符多次， gi : 表示全局匹配不区分大小写，因此要使用img标签，因为img标签只有&lt;，没有闭合无法匹配到</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;img src = x, onerror = <span class="hljs-title function_">prompt</span>(<span class="hljs-number">1</span>) <br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221104170033489.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-2"><a href="#Level-2" class="headerlink" title="Level 2"></a>Level 2</h4><p>题目详情如下:</p>
+<p><img src="/../img/image-20221104171318960.png" srcset="/img/loading.gif" lazyload></p>
+<p>正则表达式是&#x2F;[&#x3D;(]&#x2F;g，也就是将&#x3D;和(过滤掉，可以采用编码的方式进行绕过。因为js只解析字符串和标识符，所以通过将<code>(</code>编码为unicode是无法解析的，需要将其转为实体编码，所以需要加上<code>&lt;svg&gt;</code>标签。svg是一个文本集成点，能够切换命名空间，在svg标签的命名空间中使用的是xml格式，能够解析实体编码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;svg&gt;<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-handlebars"><span class="language-xml">prompt<span class="hljs-symbol">&amp;#40;</span>1)</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221104173157125.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-3"><a href="#Level-3" class="headerlink" title="Level 3"></a>Level 3</h4><p>题目情况如下：</p>
+<p><img src="/../img/image-20221104173309714.png" srcset="/img/loading.gif" lazyload></p>
+<p>发现它将-&gt;替换为’__’，并且输入在注释里面，可以通过闭合注释逃出</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">--!&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span> prompt(1)<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221104173940172.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-4"><a href="#Level-4" class="headerlink" title="Level 4"></a>Level 4</h4><p>打开题目看到如下</p>
+<p><img src="/../img/image-20221104201809595.png" srcset="/img/loading.gif" lazyload></p>
+<p>这个decodeURIComponent的含义是对url进行解码，然后要和前面的正则表达式去匹配，所以要以https:&#x2F;&#x2F; prompt.ml&#x2F;开头，因为是输入url所以可以利用重定向进行绕过，但是 &#x2F; 出现在user是不允许的，所以可以根据decode的特性，输入&#x2F;的url编码的结果%2f就行，然后在本地服务器的www文件夹下建立a.js文件，里面写入prompt(1)即可</p>
+<p><img src="/../img/image-20221104205048567.png" srcset="/img/loading.gif" lazyload></p>
+<p>注：有的浏览器不支持外部调用xss，Firefox支持，建议用Firefox多试几次</p>
+<h4 id="Level-5"><a href="#Level-5" class="headerlink" title="Level 5"></a>Level 5</h4><p>题目环境及input函数如下</p>
+<p><img src="/../img/image-20221104205610954.png" srcset="/img/loading.gif" lazyload></p>
+<p>根据input可以发现，此输入过滤了&gt;防止标签闭合，on + 关键字防止事件插入，focus防止使用autofocus，因此使用可以使用type类型覆盖将input标签的类型覆盖掉,因为.会匹配除换行之外的所有字符，所以要换行防止被过滤</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">aaa<span class="hljs-string">&quot; type=&quot;</span>image<span class="hljs-string">&quot; src=1 onerror</span><br><span class="hljs-string">=&quot;</span><span class="hljs-title function_">prompt</span>(<span class="hljs-number">1</span>)<span class="hljs-string">&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221104210416924.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-6"><a href="#Level-6" class="headerlink" title="Level 6"></a>Level 6</h4><p>提示代码如下：</p>
+<p><img src="/../img/image-20221104210503280.png" srcset="/img/loading.gif" lazyload></p>
+<p>通过代码我们可以发现，题目是构造post表单，我们需要输入的格式是fromURL#formData，例如: https: &#x2F;&#x2F;www. baidu.com#{“a”:”b},然后它会先提取出URL构造form表单，把formURL赋值给action，使用post方法构造input标签。我们进行js代码嵌入，在平时经常可以见到action中插入js代码的内容，但是后面还过滤了document.form[0].action内容，过滤了script和data。但是过滤存在着漏洞，由于存在子标签，所以在进行.action时会优先指向name&#x3D;action的tag，因此将子标签的name改成action即可绕过。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-attr">javascript</span>:<span class="hljs-title function_">prompt</span>(<span class="hljs-number">1</span>)#&#123;<span class="hljs-string">&quot;action&quot;</span>:<span class="hljs-string">&quot;Marry&quot;</span>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221104212651726.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-7"><a href="#Level-7" class="headerlink" title="Level 7"></a>Level 7</h4><p>题目如下</p>
+<p><img src="/../img/image-20221105152951303.png" srcset="/img/loading.gif" lazyload></p>
+<p>阅读源码后可知它将输入的按#划分开，然后将每一部分放到一个p标签里，且每一部分都不能超过12个字符，否则只截取前12个字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">&quot;&gt;&lt;script&gt;/*#*/prompt(1/*#*/)&lt;/script&gt;/*</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221105153727669.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-8"><a href="#Level-8" class="headerlink" title="Level 8"></a>Level 8</h4><p>打开题目如下</p>
+<p><img src="/../img/image-20221105153937698.png" srcset="/img/loading.gif" lazyload></p>
+<p>阅读源码后发现，过滤了\r \n &lt; &#x2F; 和 “,而且输入的还放在console.log中，还要逃脱双引号或者逃出本行，可以使用Unicode编码方式绕过</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">&#x27;\u2028prompt(1)\u2028--&gt;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>将上面的代码放入控制台输出后就是我们的payload</p>
+<p><img src="/../img/image-20221105160057903.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-9"><a href="#Level-9" class="headerlink" title="Level 9"></a>Level 9</h4><p>题目详情如下：</p>
+<p><img src="/../img/image-20221105162608027.png" srcset="/img/loading.gif" lazyload></p>
+<p>阅读源码后发现它在&lt;后的第一个字母前加_，例如<code>&lt;h1&gt;</code>变成了<code>&lt;_h1&gt;</code>,查资料后发现toUpperCase还可以转换一些Unicode字符例如<code>ſ</code>可以转换成<code>s</code>，js大小写敏感，不能直接将prompt大写了，要将其转换为Unicode，所以我们可以使用<code>&lt; svg&gt;</code>标签在事件中对prompt进行编码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;ſvg/onload=<span class="hljs-string">&quot;&amp;#112;&amp;#114;&amp;#111;&amp;#109;&amp;#112;&amp;#116;(1)&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221105164243826.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-10"><a href="#Level-10" class="headerlink" title="Level 10"></a>Level 10</h4><p>题目详情如下</p>
+<p><img src="/../img/image-20221105164455058.png" srcset="/img/loading.gif" lazyload></p>
+<p>阅读源码后发现，它将<code>prompt</code>转成了<code>alert</code>,后面还将<code>&#39;</code>过滤掉了，因为是先转换后过滤，所以可以在prompt里面加入<code>&#39;</code>，逃过替换，用过滤再复现<code>prompt</code>进行绕过</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">pro<span class="hljs-string">&#x27;mpt(1)</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221105164743158.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Level-11"><a href="#Level-11" class="headerlink" title="Level 11"></a>Level 11</h4><p>题目详情如下：</p>
+<p><img src="/../img/image-20221105165049603.png" srcset="/img/loading.gif" lazyload></p>
+<p>阅读后发现它对名字输入有控制，过滤了大量的字符，例如<code>&lt;</code>、<code>&gt;</code>、<code>&amp;</code>等，同时还限定了data.action的值为<code>login</code>，可以利用原来js的特性，输出的变量出现两次按最后一次算，因此可以用下面的语句。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">&quot;,&quot;</span><span class="hljs-string">&quot;message&quot;</span>:<span class="hljs-string">&quot;prompt(1)&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>因为上面正则表达式中，过滤了<code>:</code>，所以无法成功。js还有另一个特点，<code>(prompt(1))instanceof&quot;1&quot;</code>和 <code>(prompt(1))in&quot;1&quot; </code>是可以成功弹窗的，其中双引号里的1可以为任意字符，<code>in</code>或者<code>instanceof</code>为运算符，所以可以成功</p>
+<p>payload</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">&quot;(prompt(1))in&quot;</span><br><span class="hljs-string">&quot;(prompt(1))instanceof&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/image-20221105171520955.png" srcset="/img/loading.gif" lazyload></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/ctf/">#ctf</a>
+      
+        <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">#网络安全</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>XSS-game</div>
+      <div>https://amour233.github.io/2022/11/04/XSS-game/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>LYL.</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年11月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/11/05/buuctf-misc/" title="buuctf-misc">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">buuctf-misc</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/29/bugku%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" title="bugku刷题记录">
+                        <span class="hidden-mobile">bugku刷题记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'amour233/comment-utterances');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
