@@ -79,8 +79,34 @@
 <meta property="og:image" content="https://amour233.github.io/img/image-20221112191803641.png">
 <meta property="og:image" content="https://amour233.github.io/img/image-20221112191909571.png">
 <meta property="og:image" content="https://amour233.github.io/img/image-20221112192426824.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124180858287.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124181248290.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124181822866.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124184535115.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124184740270.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124185209483.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124185247115.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124185707140.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124195138219.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124195558007.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124200122574.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124200235522.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124200318787.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124201402878.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124201521329.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124202138657.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124203036701.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124203135172.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124203223595.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124203733707.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124204458921.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124204535425.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124205011185.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124205156107.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124205326544.png">
+<meta property="og:image" content="https://amour233.github.io/img/image-20221124205400772.png">
 <meta property="article:published_time" content="2022-11-05T13:32:30.000Z">
-<meta property="article:modified_time" content="2022-11-12T11:24:37.433Z">
+<meta property="article:modified_time" content="2022-11-24T14:26:54.115Z">
 <meta property="article:author" content="amour">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="网络安全">
@@ -277,7 +303,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.9k 字
         
       </span>
     
@@ -288,7 +314,7 @@
         
         
         
-          17 分钟
+          25 分钟
         
       </span>
     
@@ -464,6 +490,115 @@
 <p><img src="/../img/image-20221112191909571.png" srcset="/img/loading.gif" lazyload></p>
 <p>将其复制到brainfuck中，进行解密就可以了</p>
 <p><img src="/../img/image-20221112192426824.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="假如给我三天光明"><a href="#假如给我三天光明" class="headerlink" title="假如给我三天光明"></a>假如给我三天光明</h4><p>解压后得到</p>
+<p><img src="/../img/image-20221124180858287.png" srcset="/img/loading.gif" lazyload></p>
+<p>再解压music时需要密码，打开图片发现下面有一串字符，发现是盲文，进行破译</p>
+<p><img src="/../img/image-20221124181248290.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">kmdonowg<br></code></pre></td></tr></table></figure>
+
+<p>用此密码去解压压缩包，得到一个wav文件，用Audacity打开</p>
+<p><img src="/../img/image-20221124181822866.png" srcset="/img/loading.gif" lazyload></p>
+<p>发现其很像摩斯密码</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">-.-./-/..-./.--/.--././../-----/---../--.../...--/..---/..--../..---/...--/-../--..<br></code></pre></td></tr></table></figure>
+
+<p>解密后得到flag</p>
+<h4 id="数据包里的线索"><a href="#数据包里的线索" class="headerlink" title="数据包里的线索"></a>数据包里的线索</h4><p>解压后得到一个流量包，用wineshark打开</p>
+<p><img src="/../img/image-20221124184535115.png" srcset="/img/loading.gif" lazyload></p>
+<p>在里面筛选flag追踪tcp流都没有结果，然后筛选http去追踪状态码为200的得到</p>
+<p><img src="/../img/image-20221124184740270.png" srcset="/img/loading.gif" lazyload></p>
+<p>将下面的信息复制到base64进行解密</p>
+<p><img src="/../img/image-20221124185209483.png" srcset="/img/loading.gif" lazyload></p>
+<p>下载图片后打开</p>
+<p><img src="/../img/image-20221124185247115.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="后门查杀"><a href="#后门查杀" class="headerlink" title="后门查杀"></a>后门查杀</h4><p>题目提示如下</p>
+<p><img src="/../img/image-20221124185707140.png" srcset="/img/loading.gif" lazyload></p>
+<p>解压后用D盾扫描一下目录</p>
+<p><img src="/../img/image-20221124195138219.png" srcset="/img/loading.gif" lazyload></p>
+<p>打开漏洞文件查看得到flag</p>
+<p><img src="/../img/image-20221124195558007.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="WebShell后门"><a href="#WebShell后门" class="headerlink" title="WebShell后门"></a>WebShell后门</h4><p>题目提示如下</p>
+<p><img src="/../img/image-20221124200122574.png" srcset="/img/loading.gif" lazyload></p>
+<p>用D盾扫描一下</p>
+<p><img src="/../img/image-20221124200235522.png" srcset="/img/loading.gif" lazyload></p>
+<p>查看后门文件得到flag</p>
+<p><img src="/../img/image-20221124200318787.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="来首歌吧"><a href="#来首歌吧" class="headerlink" title="来首歌吧"></a>来首歌吧</h4><p>下载文件解压后用Audacity看一下频谱图</p>
+<p><img src="/../img/image-20221124201402878.png" srcset="/img/loading.gif" lazyload></p>
+<p>一点一点放大后查看</p>
+<p><img src="/../img/image-20221124201521329.png" srcset="/img/loading.gif" lazyload></p>
+<p>发现其有规律像摩斯密码</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">..... -... -.-. ----. ..--- ..... -.... ....- ----. -.-. -... ----- .---- ---.. ---.. ..-. ..... ..--- . -.... .---- --... -.. --... ----- ----. ..--- ----. .---- ----. .---- -.-.<br></code></pre></td></tr></table></figure>
+
+<p>用在线莫斯密码解密得到flag</p>
+<p><img src="/../img/image-20221124202138657.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="荷兰宽带数据泄露"><a href="#荷兰宽带数据泄露" class="headerlink" title="荷兰宽带数据泄露"></a>荷兰宽带数据泄露</h4><p>下载文件解压后用RouterPassView打开</p>
+<p><img src="/../img/image-20221124203036701.png" srcset="/img/loading.gif" lazyload></p>
+<p>然后查找username和password</p>
+<p><img src="/../img/image-20221124203135172.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/../img/image-20221124203223595.png" srcset="/img/loading.gif" lazyload></p>
+<p>发现有一个username和两个password进行尝试，发现username是flag</p>
+<h4 id="面具下的flag"><a href="#面具下的flag" class="headerlink" title="面具下的flag"></a>面具下的flag</h4><p>解压后得到一张图片，用binwalk解一下</p>
+<p><img src="/../img/image-20221124203733707.png" srcset="/img/loading.gif" lazyload></p>
+<p>得到一个压缩包，需要密码，用winhex看其是不是伪加密，发现有一个pk</p>
+<p><img src="/../img/image-20221124204458921.png" srcset="/img/loading.gif" lazyload></p>
+<p>修改为</p>
+<p><img src="/../img/image-20221124204535425.png" srcset="/img/loading.gif" lazyload></p>
+<p>解压后得到一个vmdk文件，取出flag.vmdk文件 ，然后在kali里使用7z解压flag.vmdk</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">7z x 文件名字 -o./<br></code></pre></td></tr></table></figure>
+
+<p>得到一堆文件夹，然后找到key_part那个得到了如下文件</p>
+<p><img src="/../img/image-20221124205011185.png" srcset="/img/loading.gif" lazyload></p>
+<p>解密后得到</p>
+<p><img src="/../img/image-20221124205156107.png" srcset="/img/loading.gif" lazyload></p>
+<p>在key_part1里看到如下的内容</p>
+<p><img src="/../img/image-20221124205326544.png" srcset="/img/loading.gif" lazyload></p>
+<p>解密后得到如下内容</p>
+<p><img src="/../img/image-20221124205400772.png" srcset="/img/loading.gif" lazyload></p>
+<p>将两部分拼起来后得到flag</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">flag&#123;N7F5<span class="hljs-emphasis">_AD5_</span>i5<span class="hljs-emphasis">_funny!&#125;</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 
               </div>
