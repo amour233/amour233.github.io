@@ -7,13 +7,15 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="八股总结计算机网络1.基础篇1.1TCP&#x2F;IP网络模型有几层自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="八股总结">
 <meta property="og:url" content="http://example.com/2024/03/15/%E5%85%AB%E8%82%A1%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="A door of a new world">
+<meta property="og:description" content="八股总结计算机网络1.基础篇1.1TCP&#x2F;IP网络模型有几层自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识">
 <meta property="og:locale">
 <meta property="article:published_time" content="2024-03-15T00:38:32.517Z">
-<meta property="article:modified_time" content="2024-03-15T02:04:02.084Z">
+<meta property="article:modified_time" content="2024-03-15T08:36:47.221Z">
 <meta property="article:author" content="Amour">
 <meta name="twitter:card" content="summary">
 
@@ -61,7 +63,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"Amour","root":"/","typed_text":["player"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","appleTouchIcon":"log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"03/11/2024 9:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"covers":["http://www.horosama.com/api/img/pc/pc_1.jpg","http://www.horosama.com/api/img/pc/pc_2.jpg","http://www.horosama.com/api/img/pc/pc_3.jpg","https://tc.dhmip.cn/imgs/2024/03/14/01347010cb647499.jpg","https://tc.dhmip.cn/imgs/2024/03/14/0b072f1593960745.jpg","https://tc.dhmip.cn/imgs/2024/03/14/1f0d740bcbb4adf7.jpeg","https://images.wallpaperscraft.com/image/single/girl_hood_ears_1013418_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_cloak_hood_984627_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_umbrella_anime_141156_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_gesture_jewelry_966884_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_fish_1005833_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_glance_eyes_1157756_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_neko_heterochromia_1162566_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_googles_anime_1156985_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_cute_ball_127642_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_animal_smoke_1190449_1280x720.jpg","https://images.wallpaperscraft.com/image/single/kitten_lying_baby_115235_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_anime_food_671_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_hair_849710_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_dress_1064277_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_headphones_anime_1079499_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_horns_forest_1066754_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_demon_horns_1085787_1280x720.jpg"]};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-15 10:04:02"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-15 16:36:47"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -377,7 +379,68 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    
+    <h1 id="八股总结"><a href="#八股总结" class="headerlink" title="八股总结"></a><a target="_blank" rel="noopener" href="https://www.xiaolincoding.com/">八股总结</a></h1><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="1-基础篇"><a href="#1-基础篇" class="headerlink" title="1.基础篇"></a>1.基础篇</h3><h4 id="1-1TCP-IP网络模型有几层"><a href="#1-1TCP-IP网络模型有几层" class="headerlink" title="1.1TCP&#x2F;IP网络模型有几层"></a>1.1TCP&#x2F;IP网络模型有几层</h4><p>自顶向下分别有应用层，传输层，网络层，网络接口层，</p>
+<p>应用层协议：HTTP、FTP、TeLent、DNS、SMTP</p>
+<p>传输层协议：TCP和UDP</p>
+<p>网络层协议：IP(ICMP和ARP)</p>
+<p>网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识网络上的设备</p>
+<h4 id="1-2当键入网址到显示网页，期间发生了什么？"><a href="#1-2当键入网址到显示网页，期间发生了什么？" class="headerlink" title="1.2当键入网址到显示网页，期间发生了什么？"></a>1.2当键入网址到显示网页，期间发生了什么？</h4><h5 id="第一步，解析url，将url拆分开，获得各部分"><a href="#第一步，解析url，将url拆分开，获得各部分" class="headerlink" title="第一步，解析url，将url拆分开，获得各部分"></a>第一步，解析url，将url拆分开，获得各部分</h5><h5 id="第二步，生产HTTP请求，根据获得的web服务器和文件名来生成请求信息"><a href="#第二步，生产HTTP请求，根据获得的web服务器和文件名来生成请求信息" class="headerlink" title="第二步，生产HTTP请求，根据获得的web服务器和文件名来生成请求信息"></a>第二步，生产HTTP请求，根据获得的web服务器和文件名来生成请求信息</h5><h5 id="第三步，查询服务器域名对应的IP地址-这里有域名的层级关系，查询流程有迭代和递归两种方法"><a href="#第三步，查询服务器域名对应的IP地址-这里有域名的层级关系，查询流程有迭代和递归两种方法" class="headerlink" title="第三步，查询服务器域名对应的IP地址(这里有域名的层级关系，查询流程有迭代和递归两种方法)"></a>第三步，查询服务器域名对应的IP地址(这里有域名的层级关系，查询流程有迭代和递归两种方法)</h5><h5 id="第四步，将HTTP传输工作交给操作系统的协议栈"><a href="#第四步，将HTTP传输工作交给操作系统的协议栈" class="headerlink" title="第四步，将HTTP传输工作交给操作系统的协议栈"></a>第四步，将HTTP传输工作交给操作系统的协议栈</h5><p>HTTP是基于TCP协议传输的，TCP提供可靠服务</p>
+<p><code>TCP报文格式：源端口、目的端口，序号，确认序列，首部长度，状态位，窗口大小</code></p>
+<p>在TCP传输数据前，要进行三次握手建立连接，目的是确保双方都有接受和发送的能力，保证网络连接可靠</p>
+<p>TCP报文有长度要求，要对HTTP请求消息进行划分</p>
+<p>MTU：IP头，TCP头加数据的最大长度，一般为1500字节</p>
+<p>MSS：数据的最大长度，MTU - IP头 - TCP头</p>
+<h5 id="第五步，TCP分割数据生成TCP报文"><a href="#第五步，TCP分割数据生成TCP报文" class="headerlink" title="第五步，TCP分割数据生成TCP报文"></a>第五步，TCP分割数据生成TCP报文</h5><p>IP包格式：版本，首部长度，服务类型，总长度，标识，标志，片偏移，TTL，协议，首部校验和，源IP地址，目的IP地址</p>
+<h5 id="第六步，生成IP报文"><a href="#第六步，生成IP报文" class="headerlink" title="第六步，生成IP报文"></a>第六步，生成IP报文</h5><p>MAC头格式：接收方MAC地址，发送方MAC地址，协议类型</p>
+<h5 id="第七步，生成MAC报文"><a href="#第七步，生成MAC报文" class="headerlink" title="第七步，生成MAC报文"></a>第七步，生成MAC报文</h5><h5 id="第八步，通过网卡将数字信息转化为电信号，末尾FCS-帧校验序列"><a href="#第八步，通过网卡将数字信息转化为电信号，末尾FCS-帧校验序列" class="headerlink" title="第八步，通过网卡将数字信息转化为电信号，末尾FCS(帧校验序列)"></a>第八步，通过网卡将数字信息转化为电信号，末尾FCS(帧校验序列)</h5><h5 id="第九步，到达交换机，交换机根据MAC地址将信号转发到相应端口，同时通过包末尾FCS校验错误"><a href="#第九步，到达交换机，交换机根据MAC地址将信号转发到相应端口，同时通过包末尾FCS校验错误" class="headerlink" title="第九步，到达交换机，交换机根据MAC地址将信号转发到相应端口，同时通过包末尾FCS校验错误"></a>第九步，到达交换机，交换机根据MAC地址将信号转发到相应端口，同时通过包末尾FCS校验错误</h5><h5 id="第十步，到达路由器，通过FCS校验错误，查询路由表确定输出端口，然后发送给对方"><a href="#第十步，到达路由器，通过FCS校验错误，查询路由表确定输出端口，然后发送给对方" class="headerlink" title="第十步，到达路由器，通过FCS校验错误，查询路由表确定输出端口，然后发送给对方"></a>第十步，到达路由器，通过FCS校验错误，查询路由表确定输出端口，然后发送给对方</h5><h5 id="第十一步，到达服务器对数据进行解包得到HTTP请求，然后生成HTTP响应报文发送回去。客户端接收到数据包，进行解包给HTTP进程，交给浏览器渲染页面"><a href="#第十一步，到达服务器对数据进行解包得到HTTP请求，然后生成HTTP响应报文发送回去。客户端接收到数据包，进行解包给HTTP进程，交给浏览器渲染页面" class="headerlink" title="第十一步，到达服务器对数据进行解包得到HTTP请求，然后生成HTTP响应报文发送回去。客户端接收到数据包，进行解包给HTTP进程，交给浏览器渲染页面"></a>第十一步，到达服务器对数据进行解包得到HTTP请求，然后生成HTTP响应报文发送回去。客户端接收到数据包，进行解包给HTTP进程，交给浏览器渲染页面</h5><h4 id="1-3OSI七层模型和TCP-IP模型"><a href="#1-3OSI七层模型和TCP-IP模型" class="headerlink" title="1.3OSI七层模型和TCP&#x2F;IP模型"></a>1.3OSI七层模型和TCP&#x2F;IP模型</h4><p>OSI ：                                                                TCP&#x2F;IP：</p>
+<p>应用层                                                                              </p>
+<p>表示层                                                                应用层</p>
+<p>会话层                                                               </p>
+<p>传输层                                                                传输层</p>
+<p>网络层                                                                网络层</p>
+<p>数据链路层                                                         网络接口层</p>
+<p>物理层</p>
+<h3 id="2-HTTP篇"><a href="#2-HTTP篇" class="headerlink" title="2.HTTP篇"></a>2.HTTP篇</h3><h4 id="2-1HTTP基本概念"><a href="#2-1HTTP基本概念" class="headerlink" title="2.1HTTP基本概念"></a>2.1HTTP基本概念</h4><p>HTTP是超文本传输协议</p>
+<p>状态码：1xx：提示信息，表示目前是协议处理的中间状态，还需后续操作</p>
+<p>​               2xx：成功，报文已经收到并被正确处理</p>
+<p>​               3xx：重定向，资源位置发生变化，需要客户端重新发送请求</p>
+<p>​               4xx：客户端错误，请求报文有误，服务器无法处理</p>
+<p>​               5xx：服务器错误，服务器在处理请求时内部发生了错误</p>
+<h5 id="HTTP常见字段"><a href="#HTTP常见字段" class="headerlink" title="HTTP常见字段"></a>HTTP常见字段</h5><p>Host：用来指定服务器的域名</p>
+<p>Content-Length：表明回应的数据长度</p>
+<p>Connection：常用于客户端要求服务器使用HTTP长连接，以便其它请求复用</p>
+<p>Content-Type：用于服务器回应时，告诉客户端，本次数据是什么格式</p>
+<p>Content-Encoding：说明数据压缩方法</p>
+<h5 id="GET和POST"><a href="#GET和POST" class="headerlink" title="GET和POST"></a>GET和POST</h5><p>GET的语义是从服务器获取指定的资源，请求的参数一般是写在URL中，又URL规定只能支持ASCII，所以GET请求的参数只允许ASCII字符，而且浏览器会对URL长度有限制</p>
+<p>POST的语义是根据请求负荷(报文body)对指定资源作出处理，POST请求携带数据的位置一般在body中，数据格式可以是任意的，浏览器不会对body大小进行限制</p>
+<h5 id="GET和POST方法都是安全和幂等的吗？"><a href="#GET和POST方法都是安全和幂等的吗？" class="headerlink" title="GET和POST方法都是安全和幂等的吗？"></a>GET和POST方法都是安全和幂等的吗？</h5><p>从RFC规范定义上来说，GET方法是幂等的，而POST不是</p>
+<p>但在实际中</p>
+<ul>
+<li>可以用 GET 方法实现新增或删除数据的请求，这样实现的 GET 方法自然就不是安全和幂等。</li>
+<li>可以用 POST 方法实现查询数据的请求，这样实现的 POST 方法自然就是安全和幂等</li>
+</ul>
+<h5 id="HTTP缓冲实现方式"><a href="#HTTP缓冲实现方式" class="headerlink" title="HTTP缓冲实现方式"></a>HTTP缓冲实现方式</h5><p>HTTP缓冲有两种实现方式，分别是强制缓冲和协商缓冲</p>
+<h6 id="强制缓冲"><a href="#强制缓冲" class="headerlink" title="强制缓冲"></a>强制缓冲</h6><p>利用相应头部中的字段实现，Cache-Control(相对时间，优先级高),Expires(绝对时间，优先级低)</p>
+<h6 id="协商缓冲"><a href="#协商缓冲" class="headerlink" title="协商缓冲"></a>协商缓冲</h6><p>通过服务器端告知客户端是否可以使用缓冲的方式被称为协商缓冲，就是通过和服务器的协商结果来判断是否使用本地缓冲</p>
+<p>实现方式：</p>
+<p>第一种，服务器通过请求头部中的<code>If-Modified-Since</code>和响应头部中的<code>last-Modified</code>比较来实现，如果最后修改时间新，就要返回最新资源，否则就响应HTTP 304走缓冲</p>
+<p>第二种：请求头部中的 <code>If-None-Match</code> 字段与响应头部中的 <code>ETag</code> 字段，这两个字段的意思是：</p>
+<ul>
+<li>响应头部中 <code>Etag</code>：唯一标识响应资源；</li>
+<li>请求头部中的 <code>If-None-Match</code>：当资源过期时，浏览器发现响应头里有 Etag，则再次向服务器发起请求时，会将请求头 If-None-Match 值设置为 Etag 的值。服务器收到请求后进行比对，如果资源没有变化返回 304，如果资源变化了返回 200。</li>
+</ul>
+<p>第二种优先级更高，可以避免因为修改时间导致的错误，可以检测出的时间粒度更细</p>
+<h5 id="HTTP特性"><a href="#HTTP特性" class="headerlink" title="HTTP特性"></a>HTTP特性</h5><p>HTTP&#x2F;1.1</p>
+<p>优点：简单，灵活和易于扩展，应用广泛和跨平台</p>
+<p>缺点：无状态双刃剑(可以添加cookie来控制)，明文传输双刃剑，不安全</p>
+<p>性能：提出了长连接的通信方式，使管道网络传输成为了可能(只解决了请求队头堵塞问题，没解决响应对头堵塞)</p>
+<h5 id="HTTP和HTTPS"><a href="#HTTP和HTTPS" class="headerlink" title="HTTP和HTTPS"></a>HTTP和HTTPS</h5><ul>
+<li>HTTP 是超文本传输协议，信息是明文传输，存在安全风险的问题。HTTPS 则解决 HTTP 不安全的缺陷，在 TCP 和 HTTP 网络层之间加入了 SSL&#x2F;TLS 安全协议，使得报文能够加密传输。</li>
+<li>HTTP 连接建立相对简单， TCP 三次握手之后便可进行 HTTP 的报文传输。而 HTTPS 在 TCP 三次握手之后，还需进行 SSL&#x2F;TLS 的握手过程，才可进入加密报文传输。</li>
+<li>两者的默认端口不一样，HTTP 默认端口号是 80，HTTPS 默认端口号是 443。</li>
+<li>HTTPS 协议需要向 CA（证书权威机构）申请数字证书，来保证服务器的身份是可信的</li>
+</ul>
+
 </article>
     
     
@@ -506,8 +569,24 @@
 
             
 
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="八股总结"><a rel="nofollow" class="trm-toc-link" href="#八股总结"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">八股总结</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="计算机网络"><a rel="nofollow" class="trm-toc-link" href="#计算机网络"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">计算机网络</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="1.基础篇"><a rel="nofollow" class="trm-toc-link" href="#1-基础篇"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">1.基础篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="2.HTTP篇"><a rel="nofollow" class="trm-toc-link" href="#2-HTTP篇"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">2.HTTP篇</span></a></li></ol></li></ol></li></ol>
+      </div>
+    </div>
+
             
 <div class="trm-fixed-container">
+    
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
     
     
         <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
