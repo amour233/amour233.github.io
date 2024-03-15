@@ -15,7 +15,7 @@
 <meta property="og:description" content="八股总结计算机网络1.基础篇1.1TCP&#x2F;IP网络模型有几层自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识">
 <meta property="og:locale">
 <meta property="article:published_time" content="2024-03-15T00:38:32.517Z">
-<meta property="article:modified_time" content="2024-03-15T08:36:47.221Z">
+<meta property="article:modified_time" content="2024-03-15T12:19:38.673Z">
 <meta property="article:author" content="Amour">
 <meta name="twitter:card" content="summary">
 
@@ -63,7 +63,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"Amour","root":"/","typed_text":["player"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","appleTouchIcon":"log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"03/11/2024 9:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"covers":["http://www.horosama.com/api/img/pc/pc_1.jpg","http://www.horosama.com/api/img/pc/pc_2.jpg","http://www.horosama.com/api/img/pc/pc_3.jpg","https://tc.dhmip.cn/imgs/2024/03/14/01347010cb647499.jpg","https://tc.dhmip.cn/imgs/2024/03/14/0b072f1593960745.jpg","https://tc.dhmip.cn/imgs/2024/03/14/1f0d740bcbb4adf7.jpeg","https://images.wallpaperscraft.com/image/single/girl_hood_ears_1013418_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_cloak_hood_984627_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_umbrella_anime_141156_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_gesture_jewelry_966884_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_fish_1005833_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_glance_eyes_1157756_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_neko_heterochromia_1162566_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_googles_anime_1156985_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_cute_ball_127642_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_animal_smoke_1190449_1280x720.jpg","https://images.wallpaperscraft.com/image/single/kitten_lying_baby_115235_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_anime_food_671_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_hair_849710_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_dress_1064277_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_headphones_anime_1079499_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_horns_forest_1066754_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_demon_horns_1085787_1280x720.jpg"]};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-15 16:36:47"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-15 20:19:38"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -400,7 +400,7 @@
 <p>网络层                                                                网络层</p>
 <p>数据链路层                                                         网络接口层</p>
 <p>物理层</p>
-<h3 id="2-HTTP篇"><a href="#2-HTTP篇" class="headerlink" title="2.HTTP篇"></a>2.HTTP篇</h3><h4 id="2-1HTTP基本概念"><a href="#2-1HTTP基本概念" class="headerlink" title="2.1HTTP基本概念"></a>2.1HTTP基本概念</h4><p>HTTP是超文本传输协议</p>
+<h3 id="2-HTTP篇"><a href="#2-HTTP篇" class="headerlink" title="2.HTTP篇"></a>2.HTTP篇</h3><h4 id="2-1-HTTP基本概念"><a href="#2-1-HTTP基本概念" class="headerlink" title="2.1 HTTP基本概念"></a>2.1 HTTP基本概念</h4><p>HTTP是超文本传输协议</p>
 <p>状态码：1xx：提示信息，表示目前是协议处理的中间状态，还需后续操作</p>
 <p>​               2xx：成功，报文已经收到并被正确处理</p>
 <p>​               3xx：重定向，资源位置发生变化，需要客户端重新发送请求</p>
@@ -440,7 +440,112 @@
 <li>两者的默认端口不一样，HTTP 默认端口号是 80，HTTPS 默认端口号是 443。</li>
 <li>HTTPS 协议需要向 CA（证书权威机构）申请数字证书，来保证服务器的身份是可信的</li>
 </ul>
-
+<p>HTTPS在HTTP和TCP之间加入了<code>SSL/TLS</code>协议，进行信息加密，添加校验机制，要求身份证书</p>
+<ul>
+<li><strong>混合加密</strong>的方式实现信息的<strong>机密性</strong>，解决了窃听的风险。</li>
+<li><strong>摘要算法</strong>的方式来实现<strong>完整性</strong>，它能够为数据生成独一无二的「指纹」，指纹用于校验数据的完整性，解决了篡改的风险。</li>
+<li>将服务器公钥放入到<strong>数字证书</strong>中，解决了冒充的风险。</li>
+</ul>
+<p>HTTPS 采用的是<strong>对称加密</strong>和<strong>非对称加密</strong>结合的「混合加密」方式：</p>
+<ul>
+<li>在通信建立前采用<strong>非对称加密</strong>的方式交换「会话秘钥」，后续就不再使用非对称加密。</li>
+<li>在通信过程中全部使用<strong>对称加密</strong>的「会话秘钥」的方式加密明文数据。</li>
+</ul>
+<p>采用「混合加密」的方式的原因：</p>
+<ul>
+<li><strong>对称加密</strong>只使用一个密钥，运算速度快，密钥必须保密，无法做到安全的密钥交换。</li>
+<li><strong>非对称加密</strong>使用两个密钥：公钥和私钥，公钥可以任意分发而私钥保密，解决了密钥交换问题但速度慢。</li>
+</ul>
+<h5 id="HTTPS建立连接过程"><a href="#HTTPS建立连接过程" class="headerlink" title="HTTPS建立连接过程"></a>HTTPS建立连接过程</h5><p>SSL&#x2F;TLS 协议基本流程：</p>
+<ul>
+<li>客户端向服务器索要并验证服务器的公钥。</li>
+<li>双方协商生产「会话秘钥」。</li>
+<li>双方采用「会话秘钥」进行加密通信。</li>
+</ul>
+<p>常用的密钥交换算法：RSA算法和ECDHE算法，通过四次握手建立连接</p>
+<h4 id="HTTP-1-1、HTTP-2、HTTP-3演变"><a href="#HTTP-1-1、HTTP-2、HTTP-3演变" class="headerlink" title="HTTP&#x2F;1.1、HTTP&#x2F;2、HTTP&#x2F;3演变"></a>HTTP&#x2F;1.1、HTTP&#x2F;2、HTTP&#x2F;3演变</h4><p><strong>HTTP&#x2F;1.1</strong></p>
+<p><strong>优点：</strong></p>
+<p>使用长连接改善性能</p>
+<p>支持管道减少整体响应时间</p>
+<p><strong>缺点：</strong></p>
+<p>头部没有压缩</p>
+<p>头部冗余</p>
+<p>响应队头堵塞</p>
+<p>没有优先级</p>
+<p>服务器只能被动响应</p>
+<p><strong>HTTP&#x2F;2</strong></p>
+<p><strong>优点</strong>：</p>
+<p>基于HTTPS，安全有保障</p>
+<p>头部压缩，去掉多次重复头部</p>
+<p>使用二进制格式，加快传输效率</p>
+<p>并发传送</p>
+<p>服务器推送</p>
+<p><strong>缺点</strong>：</p>
+<p>TCP队头堵塞</p>
+<p><strong>HTTP&#x2F;3</strong></p>
+<p><strong>优点</strong>：</p>
+<p>无队头堵塞</p>
+<p>更快的建立连接</p>
+<p>连接迁移</p>
+<h4 id="2-2-HTTP-1-1如何优化"><a href="#2-2-HTTP-1-1如何优化" class="headerlink" title="2.2 HTTP&#x2F;1.1如何优化"></a>2.2 HTTP&#x2F;1.1如何优化</h4><p><strong>减少HTTP请求</strong></p>
+<p>利用缓冲技术</p>
+<p>减少重定向请求次数</p>
+<p>和并请求</p>
+<p>延迟发送请求</p>
+<p><strong>减少响应数据大小</strong></p>
+<p>无损压缩</p>
+<h4 id="2-3-HTTPS-RSA握手"><a href="#2-3-HTTPS-RSA握手" class="headerlink" title="2.3 HTTPS RSA握手"></a>2.3 HTTPS RSA握手</h4><p><strong>第一次握手</strong></p>
+<p>发送打招呼信息，里面包含随机数</p>
+<p><strong>第二次</strong></p>
+<p>服务端返回确认的TLS版本号，给出随机数，选择合适密码套件，还会发送数字证书</p>
+<p><strong>第三次</strong></p>
+<p>产生随机数并加密发送给服务端，根据三个随机数生成会话密钥，如何发送消息通知启用密钥，最后在把前面的数据合起来做个摘要，加密后发送给服务器</p>
+<p><strong>第四次</strong></p>
+<p>服务器同样把前面的数据合起来做摘要并加密发送回去</p>
+<p><strong>缺点</strong> 不支持前向保密，私钥泄露后不安全</p>
+<h4 id="2-4-HTTPS-ECDHE握手"><a href="#2-4-HTTPS-ECDHE握手" class="headerlink" title="2.4 HTTPS ECDHE握手"></a>2.4 HTTPS ECDHE握手</h4><p><code>ECDHE</code>算法利用圆锥曲线特性，利用更少的计算量计算</p>
+<p><strong>使用了 ECDHE，在 TLS 第四次握手前，客户端就已经发送了加密的 HTTP 数据</strong>，而对于 RSA 握手过程，必须要完成 TLS 四次握手，才能传输应用数据</p>
+<p>比RSA握手少了一个消息往返时间</p>
+<p><strong>第一次握手</strong></p>
+<p>打招呼，带有和RSA一样的数据</p>
+<p><strong>第二次</strong></p>
+<p>回消息，随机数和选择的密码套件，接着发送证书，发送选择圆锥曲线，根据选的曲线可以得到基点G，可以计算出公钥</p>
+<p><strong>第三次</strong></p>
+<p>客户端验证证书，生成随机数，根据得到的消息计算出公钥发给服务器端，然后通知服务器端改用对称算法加密通信，最后把自己发的数据做一个摘要，加密后发送</p>
+<p><strong>第四次</strong></p>
+<p>服务器重复客户端最后的操作</p>
+<p>支持前向保密，可以在第三次握手后就开始发送加密的HTTP数据</p>
+<h4 id="2-5-HTTPS如何优化"><a href="#2-5-HTTPS如何优化" class="headerlink" title="2.5 HTTPS如何优化"></a>2.5 HTTPS如何优化</h4><p>HTTPS 相比 HTTP 协议多一个 TLS 协议握手过程，<strong>目的是为了通过非对称加密握手协商或者交换出对称加密密钥</strong>，这个过程最长可以花费掉 2 RTT，接着后续传输的应用数据都得使用对称加密密钥来加密&#x2F;解密。</p>
+<p><strong>硬件优化</strong></p>
+<p>HTTPS协议是计算密集型，优化CPU</p>
+<p><strong>软件优化</strong></p>
+<p>软件升级，协议优化(密钥交换算法优化，TLS升级)</p>
+<p><strong>证书优化</strong></p>
+<p>证书验证优化</p>
+<p><strong>会话复用</strong></p>
+<p>Session ID</p>
+<ul>
+<li>服务器必须保持每一个客户端的会话密钥，随着客户端的增多，<strong>服务器的内存压力也会越大</strong>。</li>
+<li>现在网站服务一般是由多台服务器通过负载均衡提供服务的，<strong>客户端再次连接不一定会命中上次访问过的服务器</strong>，于是还要走完整的 TLS 握手过程</li>
+</ul>
+<p>Session Ticket</p>
+<p><strong>服务器不再缓存每个客户端的会话密钥，而是把缓存的工作交给了客户端</strong>，类似于 HTTP 的 Cookie。</p>
+<p>以上都不具备前向安全性，应对重放攻击很难</p>
+<h4 id="2-6-既然有-HTTP-协议，为什么还要有-RPC？"><a href="#2-6-既然有-HTTP-协议，为什么还要有-RPC？" class="headerlink" title="2.6 既然有 HTTP 协议，为什么还要有 RPC？"></a>2.6 既然有 HTTP 协议，为什么还要有 RPC？</h4><ul>
+<li>纯裸 TCP 是能收发数据，但它是个<strong>无边界</strong>的数据流，上层需要定义<strong>消息格式</strong>用于定义<strong>消息边界</strong>。于是就有了各种协议，HTTP 和各类 RPC 协议就是在 TCP 之上定义的应用层协议。</li>
+<li><strong>RPC 本质上不算是协议，而是一种调用方式</strong>，而像 gRPC 和 Thrift 这样的具体实现，才是协议，它们是实现了 RPC 调用的协议。目的是希望程序员能像调用本地方法那样去调用远端的服务方法。同时 RPC 有很多种实现方式，<strong>不一定非得基于 TCP 协议</strong>。</li>
+<li>从发展历史来说，<strong>HTTP 主要用于 B&#x2F;S 架构，而 RPC 更多用于 C&#x2F;S 架构。但现在其实已经没分那么清了，B&#x2F;S 和 C&#x2F;S 在慢慢融合</strong>。很多软件同时支持多端，所以对外一般用 HTTP 协议，而内部集群的微服务之间则采用 RPC 协议进行通讯。</li>
+<li>RPC 其实比 HTTP 出现的要早，且比目前主流的 HTTP&#x2F;1.1 <strong>性能</strong>要更好，所以大部分公司内部都还在使用 RPC。</li>
+<li><strong>HTTP&#x2F;2.0</strong> 在 <strong>HTTP&#x2F;1.1</strong> 的基础上做了优化，性能可能比很多 RPC 协议都要好，但由于是这几年才出来的，所以也不太可能取代掉 RPC。</li>
+</ul>
+<h4 id="2-7-既然有-HTTP-协议，为什么还要有-WebSocket？"><a href="#2-7-既然有-HTTP-协议，为什么还要有-WebSocket？" class="headerlink" title="2.7 既然有 HTTP 协议，为什么还要有 WebSocket？"></a>2.7 既然有 HTTP 协议，为什么还要有 WebSocket？</h4><ul>
+<li>TCP 协议本身是<strong>全双工</strong>的，但我们最常用的 HTTP&#x2F;1.1，虽然是基于 TCP 的协议，但它是<strong>半双工</strong>的，对于大部分需要服务器主动推送数据到客户端的场景，都不太友好，因此我们需要使用支持全双工的 WebSocket 协议。</li>
+<li>在 HTTP&#x2F;1.1 里，只要客户端不问，服务端就不答。基于这样的特点，对于登录页面这样的简单场景，可以使用<strong>定时轮询或者长轮询</strong>的方式实现<strong>服务器推送</strong>(comet)的效果。</li>
+<li>对于客户端和服务端之间需要频繁交互的复杂场景，比如网页游戏，都可以考虑使用 WebSocket 协议。</li>
+<li>WebSocket 和 socket 几乎没有任何关系，只是叫法相似。</li>
+<li>正因为各个浏览器都支持 HTTP协 议，所以 WebSocket 会先利用HTTP协议加上一些特殊的 header 头进行握手升级操作，升级成功后就跟 HTTP 没有任何关系了，之后就用 WebSocket 的数据格式进行收发数据。</li>
+</ul>
+<h3 id="3-TCP篇"><a href="#3-TCP篇" class="headerlink" title="3. TCP篇"></a>3. TCP篇</h3><h4 id="3-1-TCP-三次握手与四次挥手面试题"><a href="#3-1-TCP-三次握手与四次挥手面试题" class="headerlink" title="3.1 TCP 三次握手与四次挥手面试题"></a>3.1 TCP 三次握手与四次挥手面试题</h4>
 </article>
     
     
@@ -577,7 +682,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="八股总结"><a rel="nofollow" class="trm-toc-link" href="#八股总结"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">八股总结</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="计算机网络"><a rel="nofollow" class="trm-toc-link" href="#计算机网络"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">计算机网络</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="1.基础篇"><a rel="nofollow" class="trm-toc-link" href="#1-基础篇"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">1.基础篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="2.HTTP篇"><a rel="nofollow" class="trm-toc-link" href="#2-HTTP篇"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">2.HTTP篇</span></a></li></ol></li></ol></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="八股总结"><a rel="nofollow" class="trm-toc-link" href="#八股总结"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">八股总结</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="计算机网络"><a rel="nofollow" class="trm-toc-link" href="#计算机网络"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">计算机网络</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="1.基础篇"><a rel="nofollow" class="trm-toc-link" href="#1-基础篇"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">1.基础篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="2.HTTP篇"><a rel="nofollow" class="trm-toc-link" href="#2-HTTP篇"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">2.HTTP篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="3. TCP篇"><a rel="nofollow" class="trm-toc-link" href="#3-TCP篇"><span class="trm-toc-number">1.1.3.</span> <span class="trm-toc-text">3. TCP篇</span></a></li></ol></li></ol></li></ol>
       </div>
     </div>
 
