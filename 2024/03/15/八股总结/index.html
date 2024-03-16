@@ -7,15 +7,15 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="八股总结计算机网络1.基础篇1.1TCP&#x2F;IP网络模型有几层自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识">
+<meta name="description" content="八股总结计算机网络1.基础篇TCP&#x2F;IP网络模型有几层 自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="八股总结">
 <meta property="og:url" content="http://example.com/2024/03/15/%E5%85%AB%E8%82%A1%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="A door of a new world">
-<meta property="og:description" content="八股总结计算机网络1.基础篇1.1TCP&#x2F;IP网络模型有几层自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识">
+<meta property="og:description" content="八股总结计算机网络1.基础篇TCP&#x2F;IP网络模型有几层 自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识网络">
 <meta property="og:locale">
 <meta property="article:published_time" content="2024-03-15T00:38:32.517Z">
-<meta property="article:modified_time" content="2024-03-15T13:11:36.608Z">
+<meta property="article:modified_time" content="2024-03-16T10:35:21.672Z">
 <meta property="article:author" content="Amour">
 <meta name="twitter:card" content="summary">
 
@@ -63,7 +63,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"Amour","root":"/","typed_text":["player"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","appleTouchIcon":"log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"03/11/2024 9:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"covers":["http://www.horosama.com/api/img/pc/pc_1.jpg","http://www.horosama.com/api/img/pc/pc_2.jpg","http://www.horosama.com/api/img/pc/pc_3.jpg","https://tc.dhmip.cn/imgs/2024/03/14/01347010cb647499.jpg","https://tc.dhmip.cn/imgs/2024/03/14/0b072f1593960745.jpg","https://tc.dhmip.cn/imgs/2024/03/14/1f0d740bcbb4adf7.jpeg","https://images.wallpaperscraft.com/image/single/girl_hood_ears_1013418_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_cloak_hood_984627_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_umbrella_anime_141156_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_gesture_jewelry_966884_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_fish_1005833_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_glance_eyes_1157756_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_neko_heterochromia_1162566_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_googles_anime_1156985_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_cute_ball_127642_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_animal_smoke_1190449_1280x720.jpg","https://images.wallpaperscraft.com/image/single/kitten_lying_baby_115235_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_anime_food_671_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_hair_849710_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_dress_1064277_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_headphones_anime_1079499_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_horns_forest_1066754_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_demon_horns_1085787_1280x720.jpg"]};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-15 21:11:36"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-16 18:35:21"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -379,12 +379,14 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="八股总结"><a href="#八股总结" class="headerlink" title="八股总结"></a><a target="_blank" rel="noopener" href="https://www.xiaolincoding.com/">八股总结</a></h1><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="1-基础篇"><a href="#1-基础篇" class="headerlink" title="1.基础篇"></a>1.基础篇</h3><h4 id="1-1TCP-IP网络模型有几层"><a href="#1-1TCP-IP网络模型有几层" class="headerlink" title="1.1TCP&#x2F;IP网络模型有几层"></a>1.1TCP&#x2F;IP网络模型有几层</h4><p>自顶向下分别有应用层，传输层，网络层，网络接口层，</p>
+    <h1 id="八股总结"><a href="#八股总结" class="headerlink" title="八股总结"></a><a target="_blank" rel="noopener" href="https://www.xiaolincoding.com/">八股总结</a></h1><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="1-基础篇"><a href="#1-基础篇" class="headerlink" title="1.基础篇"></a>1.基础篇</h3><p><strong>TCP&#x2F;IP网络模型有几层</strong></p>
+<p>自顶向下分别有应用层，传输层，网络层，网络接口层，</p>
 <p>应用层协议：HTTP、FTP、TeLent、DNS、SMTP</p>
 <p>传输层协议：TCP和UDP</p>
 <p>网络层协议：IP(ICMP和ARP)</p>
 <p>网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识网络上的设备</p>
-<h4 id="1-2当键入网址到显示网页，期间发生了什么？"><a href="#1-2当键入网址到显示网页，期间发生了什么？" class="headerlink" title="1.2当键入网址到显示网页，期间发生了什么？"></a>1.2当键入网址到显示网页，期间发生了什么？</h4><p><strong>第一步</strong>，解析url，将url拆分开，获得各部分</p>
+<p><strong>当键入网址到显示网页，期间发生了什么？</strong></p>
+<p><strong>第一步</strong>，解析url，将url拆分开，获得各部分</p>
 <p><strong>第二步</strong>，生产HTTP请求，根据获得的web服务器和文件名来生成请求信息</p>
 <p><strong>第三步</strong>，查询服务器域名对应的IP地址(这里有域名的层级关系，查询流程有迭代和递归两种方法)</p>
 <p><strong>第四步</strong>，将HTTP传输工作交给操作系统的协议栈</p>
@@ -403,7 +405,8 @@
 <p><strong>第九步</strong>，到达交换机，交换机根据MAC地址将信号转发到相应端口，同时通过包末尾FCS校验错误</p>
 <p><strong>第十步</strong>，到达路由器，通过FCS校验错误，查询路由表确定输出端口，然后发送给对方</p>
 <p><strong>第十一步</strong>，到达服务器对数据进行解包得到HTTP请求，然后生成HTTP响应报文发送回去。客户端接收到数据包，进行解包给HTTP进程，交给浏览器渲染页面</p>
-<h4 id="1-3OSI七层模型和TCP-IP模型"><a href="#1-3OSI七层模型和TCP-IP模型" class="headerlink" title="1.3OSI七层模型和TCP&#x2F;IP模型"></a>1.3OSI七层模型和TCP&#x2F;IP模型</h4><p>OSI ：                                                                TCP&#x2F;IP：</p>
+<p><strong>OSI七层模型和TCP&#x2F;IP模型</strong></p>
+<p>OSI ：                                                                TCP&#x2F;IP：</p>
 <p>应用层                                                                              </p>
 <p>表示层                                                                应用层</p>
 <p>会话层                                                               </p>
@@ -411,7 +414,8 @@
 <p>网络层                                                                网络层</p>
 <p>数据链路层                                                         网络接口层</p>
 <p>物理层</p>
-<h3 id="2-HTTP篇"><a href="#2-HTTP篇" class="headerlink" title="2.HTTP篇"></a>2.HTTP篇</h3><h4 id="2-1-HTTP基本概念"><a href="#2-1-HTTP基本概念" class="headerlink" title="2.1 HTTP基本概念"></a>2.1 HTTP基本概念</h4><p>HTTP是超文本传输协议</p>
+<h3 id="2-HTTP篇"><a href="#2-HTTP篇" class="headerlink" title="2.HTTP篇"></a>2.HTTP篇</h3><p><strong>HTTP基本概念</strong></p>
+<p>HTTP是超文本传输协议</p>
 <p>状态码：1xx：提示信息，表示目前是协议处理的中间状态，还需后续操作</p>
 <p>​               2xx：成功，报文已经收到并被正确处理</p>
 <p>​               3xx：重定向，资源位置发生变化，需要客户端重新发送请求</p>
@@ -483,7 +487,7 @@
 <li>双方采用「会话秘钥」进行加密通信。</li>
 </ul>
 <p>常用的密钥交换算法：RSA算法和ECDHE算法，通过四次握手建立连接</p>
-<h4 id="HTTP-1-1、HTTP-2、HTTP-3演变"><a href="#HTTP-1-1、HTTP-2、HTTP-3演变" class="headerlink" title="HTTP&#x2F;1.1、HTTP&#x2F;2、HTTP&#x2F;3演变"></a>HTTP&#x2F;1.1、HTTP&#x2F;2、HTTP&#x2F;3演变</h4><p><strong>HTTP&#x2F;1.1</strong></p>
+<p><strong>HTTP&#x2F;1.1</strong></p>
 <p><strong>优点：</strong></p>
 <p>使用长连接改善性能</p>
 <p>支持管道减少整体响应时间</p>
@@ -507,14 +511,16 @@
 <p>无队头堵塞</p>
 <p>更快的建立连接</p>
 <p>连接迁移</p>
-<h4 id="2-2-HTTP-1-1如何优化"><a href="#2-2-HTTP-1-1如何优化" class="headerlink" title="2.2 HTTP&#x2F;1.1如何优化"></a>2.2 HTTP&#x2F;1.1如何优化</h4><p><strong>减少HTTP请求</strong></p>
+<p><strong>HTTP&#x2F;1.1如何优化</strong></p>
+<p><strong>减少HTTP请求</strong></p>
 <p>利用缓冲技术</p>
 <p>减少重定向请求次数</p>
 <p>和并请求</p>
 <p>延迟发送请求</p>
 <p><strong>减少响应数据大小</strong></p>
 <p>无损压缩</p>
-<h4 id="2-3-HTTPS-RSA握手"><a href="#2-3-HTTPS-RSA握手" class="headerlink" title="2.3 HTTPS RSA握手"></a>2.3 HTTPS RSA握手</h4><p><strong>第一次握手</strong></p>
+<p> <strong>HTTPS RSA握手</strong></p>
+<p><strong>第一次握手</strong></p>
 <p>发送打招呼信息，里面包含随机数</p>
 <p><strong>第二次</strong></p>
 <p>服务端返回确认的TLS版本号，给出随机数，选择合适密码套件，还会发送数字证书</p>
@@ -523,7 +529,8 @@
 <p><strong>第四次</strong></p>
 <p>服务器同样把前面的数据合起来做摘要并加密发送回去</p>
 <p><strong>缺点</strong> 不支持前向保密，私钥泄露后不安全</p>
-<h4 id="2-4-HTTPS-ECDHE握手"><a href="#2-4-HTTPS-ECDHE握手" class="headerlink" title="2.4 HTTPS ECDHE握手"></a>2.4 HTTPS ECDHE握手</h4><p><code>ECDHE</code>算法利用圆锥曲线特性，利用更少的计算量计算</p>
+<p> <strong>HTTPS ECDHE握手</strong></p>
+<p><code>ECDHE</code>算法利用圆锥曲线特性，利用更少的计算量计算</p>
 <p><strong>使用了 ECDHE，在 TLS 第四次握手前，客户端就已经发送了加密的 HTTP 数据</strong>，而对于 RSA 握手过程，必须要完成 TLS 四次握手，才能传输应用数据</p>
 <p>比RSA握手少了一个消息往返时间</p>
 <p><strong>第一次握手</strong></p>
@@ -535,7 +542,8 @@
 <p><strong>第四次</strong></p>
 <p>服务器重复客户端最后的操作</p>
 <p>支持前向保密，可以在第三次握手后就开始发送加密的HTTP数据</p>
-<h4 id="2-5-HTTPS如何优化"><a href="#2-5-HTTPS如何优化" class="headerlink" title="2.5 HTTPS如何优化"></a>2.5 HTTPS如何优化</h4><p>HTTPS 相比 HTTP 协议多一个 TLS 协议握手过程，<strong>目的是为了通过非对称加密握手协商或者交换出对称加密密钥</strong>，这个过程最长可以花费掉 2 RTT，接着后续传输的应用数据都得使用对称加密密钥来加密&#x2F;解密。</p>
+<p><strong>HTTPS如何优化</strong></p>
+<p>HTTPS 相比 HTTP 协议多一个 TLS 协议握手过程，<strong>目的是为了通过非对称加密握手协商或者交换出对称加密密钥</strong>，这个过程最长可以花费掉 2 RTT，接着后续传输的应用数据都得使用对称加密密钥来加密&#x2F;解密。</p>
 <p><strong>硬件优化</strong></p>
 <p>HTTPS协议是计算密集型，优化CPU</p>
 <p><strong>软件优化</strong></p>
@@ -551,21 +559,23 @@
 <p>Session Ticket</p>
 <p><strong>服务器不再缓存每个客户端的会话密钥，而是把缓存的工作交给了客户端</strong>，类似于 HTTP 的 Cookie。</p>
 <p>以上都不具备前向安全性，应对重放攻击很难</p>
-<h4 id="2-6-既然有-HTTP-协议，为什么还要有-RPC？"><a href="#2-6-既然有-HTTP-协议，为什么还要有-RPC？" class="headerlink" title="2.6 既然有 HTTP 协议，为什么还要有 RPC？"></a>2.6 既然有 HTTP 协议，为什么还要有 RPC？</h4><ul>
+<p> <strong>既然有 HTTP 协议，为什么还要有 RPC？</strong></p>
+<ul>
 <li>纯裸 TCP 是能收发数据，但它是个<strong>无边界</strong>的数据流，上层需要定义<strong>消息格式</strong>用于定义<strong>消息边界</strong>。于是就有了各种协议，HTTP 和各类 RPC 协议就是在 TCP 之上定义的应用层协议。</li>
 <li><strong>RPC 本质上不算是协议，而是一种调用方式</strong>，而像 gRPC 和 Thrift 这样的具体实现，才是协议，它们是实现了 RPC 调用的协议。目的是希望程序员能像调用本地方法那样去调用远端的服务方法。同时 RPC 有很多种实现方式，<strong>不一定非得基于 TCP 协议</strong>。</li>
 <li>从发展历史来说，<strong>HTTP 主要用于 B&#x2F;S 架构，而 RPC 更多用于 C&#x2F;S 架构。但现在其实已经没分那么清了，B&#x2F;S 和 C&#x2F;S 在慢慢融合</strong>。很多软件同时支持多端，所以对外一般用 HTTP 协议，而内部集群的微服务之间则采用 RPC 协议进行通讯。</li>
 <li>RPC 其实比 HTTP 出现的要早，且比目前主流的 HTTP&#x2F;1.1 <strong>性能</strong>要更好，所以大部分公司内部都还在使用 RPC。</li>
 <li><strong>HTTP&#x2F;2.0</strong> 在 <strong>HTTP&#x2F;1.1</strong> 的基础上做了优化，性能可能比很多 RPC 协议都要好，但由于是这几年才出来的，所以也不太可能取代掉 RPC。</li>
 </ul>
-<h4 id="2-7-既然有-HTTP-协议，为什么还要有-WebSocket？"><a href="#2-7-既然有-HTTP-协议，为什么还要有-WebSocket？" class="headerlink" title="2.7 既然有 HTTP 协议，为什么还要有 WebSocket？"></a>2.7 既然有 HTTP 协议，为什么还要有 WebSocket？</h4><ul>
+<p><strong>既然有 HTTP 协议，为什么还要有 WebSocket？</strong></p>
+<ul>
 <li>TCP 协议本身是<strong>全双工</strong>的，但我们最常用的 HTTP&#x2F;1.1，虽然是基于 TCP 的协议，但它是<strong>半双工</strong>的，对于大部分需要服务器主动推送数据到客户端的场景，都不太友好，因此我们需要使用支持全双工的 WebSocket 协议。</li>
 <li>在 HTTP&#x2F;1.1 里，只要客户端不问，服务端就不答。基于这样的特点，对于登录页面这样的简单场景，可以使用<strong>定时轮询或者长轮询</strong>的方式实现<strong>服务器推送</strong>(comet)的效果。</li>
 <li>对于客户端和服务端之间需要频繁交互的复杂场景，比如网页游戏，都可以考虑使用 WebSocket 协议。</li>
 <li>WebSocket 和 socket 几乎没有任何关系，只是叫法相似。</li>
 <li>正因为各个浏览器都支持 HTTP协 议，所以 WebSocket 会先利用HTTP协议加上一些特殊的 header 头进行握手升级操作，升级成功后就跟 HTTP 没有任何关系了，之后就用 WebSocket 的数据格式进行收发数据。</li>
 </ul>
-<h3 id="3-TCP篇"><a href="#3-TCP篇" class="headerlink" title="3. TCP篇"></a>3. TCP篇</h3><h4 id="3-1-TCP-三次握手与四次挥手面试题"><a href="#3-1-TCP-三次握手与四次挥手面试题" class="headerlink" title="3.1 TCP 三次握手与四次挥手面试题"></a>3.1 TCP 三次握手与四次挥手面试题</h4><p><strong>为什么是三次握手？不是两次、四次</strong></p>
+<h3 id="3-TCP篇"><a href="#3-TCP篇" class="headerlink" title="3. TCP篇"></a>3. TCP篇</h3><p><strong>为什么是三次握手？不是两次、四次</strong></p>
 <ul>
 <li>三次握手才可以阻止重复历史连接的初始化（主要原因）</li>
 <li>三次握手才可以同步双方的初始序列号</li>
@@ -628,6 +638,122 @@
 <li>防止历史连接中的数据，被后面相同四元组的连接错误的接收；</li>
 <li>保证「被动关闭连接」的一方，能被正确的关闭；</li>
 </ul>
+<p><strong>TIME_WAIT 过多有什么危害？</strong></p>
+<ul>
+<li>第一是占用系统资源，比如文件描述符、内存资源、CPU 资源、线程资源等；</li>
+<li>第二是占用端口资源，端口资源也是有限的</li>
+</ul>
+<p><strong>服务器出现大量 TIME_WAIT 状态的原因有哪些？</strong></p>
+<ul>
+<li>第一个场景：HTTP 没有使用长连接</li>
+<li>第二个场景：HTTP 长连接超时</li>
+<li>第三个场景：HTTP 长连接的请求数量达到上限</li>
+</ul>
+<p> <strong>TCP 重传、滑动窗口、流量控制、拥塞控制</strong></p>
+<p>慢启动，拥塞避免，拥塞发生(慢启动，快速重传)，快速恢复</p>
+<p><strong>TCP 三次握手的性能提升</strong></p>
+<ul>
+<li>你可以根据网络的稳定性和目标服务器的繁忙程度修改 SYN 的重传次数，调整客户端的三次握手时间上限。</li>
+<li>修改 SYN + ACK 报文 的重传次数</li>
+<li>调整 SYN 半连接队列长度</li>
+<li>调整 accept 队列长度</li>
+<li>绕过三次握手(tcp_fastopen)</li>
+</ul>
+<p><strong>TCP 四次挥手的性能提升</strong></p>
+<ul>
+<li>调整 FIN 报文重传次数</li>
+<li>调整 FIN_WAIT2 状态的时间(close函数关闭)</li>
+<li>调整孤儿连接上限数量(close函数关闭的)</li>
+<li>调整 time_wait 状态上限数量</li>
+<li>复用time_wait 状态的连接(只适用于客户端)</li>
+</ul>
+<p><strong>TCP 传输数据的性能提升</strong></p>
+<ul>
+<li>扩大窗口大小</li>
+<li>调整发送缓冲区范围</li>
+<li>调整接收缓冲区范围</li>
+<li>打开接收缓冲区动态调节</li>
+<li>调整内存范围</li>
+</ul>
+<p><strong>如何理解字节流？</strong></p>
+<p>我们不能认为一个用户消息对应一个 TCP 报文，正因为这样，所以 TCP 是面向字节流的协议，UDP是一个消息对应一个报文。</p>
+<p><strong>如何解决粘包</strong></p>
+<ul>
+<li>固定长度的消息；</li>
+<li>特殊字符作为边界；</li>
+<li>自定义消息结构。</li>
+</ul>
+<p><strong>为什么 TCP 每次建立连接时，初始化序列号都要不一样呢</strong></p>
+<p>客户端和服务端的初始化序列号都是随机生成，能很大程度上避免历史报文被下一个相同四元组的连接接收，然后又引入时间戳的机制，从而完全避免了历史报文被接收的问题</p>
+<p><strong>SYN 报文什么时候情况下会被丢弃？</strong></p>
+<ul>
+<li>开启 tcp_tw_recycle 参数，并且在 NAT 环境下，造成 SYN 报文被丢弃</li>
+<li>TCP 两个队列满了（半连接队列和全连接队列），造成 SYN 报文被丢弃</li>
+</ul>
+<p><strong>已建立连接的TCP，收到SYN会发生什么？</strong></p>
+<ul>
+<li>客户端的 SYN 报文里的端口号与历史连接不相同，被视为新建立的连接</li>
+<li>客户端的 SYN 报文里的端口号与历史连接相同，会回复一个携带了正确序列号和确认号的 ACK 报文，这个 ACK 被称之为 Challenge ACK。接着，客户端收到这个 Challenge ACK，发现确认号（ack num）并不是自己期望收到的，于是就会回 RST 报文，服务端收到后，就会释放掉该连接。</li>
+</ul>
+<p><strong>如何关闭一个tcp连接</strong></p>
+<ul>
+<li>tcpkill 工具是在双方进行 TCP 通信时，拿到对方下一次期望收到的序列号，然后将序列号填充到伪造的 RST 报文，并将其发送给对方，达到关闭 TCP 连接的效果，只能关非活跃的。</li>
+<li>killcx 工具是主动发送一个 SYN 报文，对方收到后会回复一个携带了正确序列号和确认号的 ACK 报文，这个 ACK 被称之为 Challenge ACK，这时就可以拿到对方下一次期望收到的序列号，然后将序列号填充到伪造的 RST 报文，并将其发送给对方，达到关闭 TCP 连接的效果，什么状态都可以关。</li>
+</ul>
+<p><strong>四次挥手中收到乱序的 FIN 包会如何处理？</strong></p>
+<p>在 FIN_WAIT_2 状态时，如果收到乱序的 FIN 报文，那么就被会加入到「乱序队列」，并不会进入到 TIME_WAIT 状态。等再次收到前面被网络延迟的数据包时，会判断乱序队列有没有数据，然后会检测乱序队列中是否有可用的数据，如果能在乱序队列中找到与当前报文的序列号保持的顺序的报文，就会看该报文是否有 FIN 标志，如果发现有 FIN 标志，这时才会进入 TIME_WAIT 状态。</p>
+<p><strong>在 TCP 正常挥手过程中，处于 TIME_WAIT 状态的连接，收到相同四元组的 SYN 后会发生什么？</strong></p>
+<ul>
+<li>如果处于 TIME_WAIT 状态的连接收到「合法的 SYN 」后，就会重用此四元组连接，跳过 2MSL 而转变为 SYN_RECV 状态，接着就能进行建立连接过程</li>
+<li>如果处于 TIME_WAIT 状态的连接收到「非法的 SYN 」后，就会再回复一个第四次挥手的 ACK 报文，客户端收到后，发现并不是自己期望收到确认号（ack num），就回 RST 报文给服务端</li>
+</ul>
+<p><strong>拔掉网线后， 原本的 TCP 连接还存在吗？</strong></p>
+<p>客户端拔掉网线后，并不会直接影响 TCP 连接状态。所以，拔掉网线后，TCP 连接是否还会存在，关键要看拔掉网线之后，有没有进行数据传输。</p>
+<p>有数据传输的情况：</p>
+<ul>
+<li>在客户端拔掉网线后，如果服务端发送了数据报文，那么在服务端重传次数没有达到最大值之前，客户端就插回了网线，那么双方原本的 TCP 连接还是能正常存在，就好像什么事情都没有发生。</li>
+<li>在客户端拔掉网线后，如果服务端发送了数据报文，在客户端插回网线之前，服务端重传次数达到了最大值时，服务端就会断开 TCP 连接。等到客户端插回网线后，向服务端发送了数据，因为服务端已经断开了与客户端相同四元组的 TCP 连接，所以就会回 RST 报文，客户端收到后就会断开 TCP 连接。至此， 双方的 TCP 连接都断开了。</li>
+</ul>
+<p>没有数据传输的情况：</p>
+<ul>
+<li>如果双方都没有开启 TCP keepalive 机制，那么在客户端拔掉网线后，如果客户端一直不插回网线，那么客户端和服务端的 TCP 连接状态将会一直保持存在。</li>
+<li>如果双方都开启了 TCP keepalive 机制，那么在客户端拔掉网线后，如果客户端一直不插回网线，TCP keepalive 机制会探测到对方的 TCP 连接没有存活，于是就会断开 TCP 连接。而如果在 TCP 探测期间，客户端插回了网线，那么双方原本的 TCP 连接还是能正常存在。</li>
+</ul>
+<p><strong>tcp_tw_reuse 为什么默认是关闭的？</strong></p>
+<ul>
+<li>历史 RST 报文可能会终止后面相同四元组的连接，因为 PAWS 检查到即使 RST 是过期的，也不会丢弃。</li>
+<li>如果第四次挥手的 ACK 报文丢失了，有可能被动关闭连接的一方不能被正常的关闭;</li>
+</ul>
+<p><strong>HTTPS中的TCP和TLS</strong></p>
+<p>「HTTPS 是先进行 TCP 三次握手，再进行 TLSv1.2 四次握手」，这句话一点问题都没有，怀疑这句话是错的人，才有问题。</p>
+<p>「HTTPS 中的 TLS 握手过程可以同时进行三次握手」，这个场景是可能存在到，但是在没有说任何前提条件，而说这句话就等于耍流氓。需要下面这两个条件同时满足才可以：</p>
+<ul>
+<li>客户端和服务端都开启了 TCP Fast Open 功能，且 TLS 版本是 1.3；</li>
+<li>客户端和服务端已经完成过一次通信；</li>
+</ul>
+<p><strong>TCP Keepalive 和 HTTP Keep-Alive 是一个东西吗？</strong></p>
+<ul>
+<li>HTTP 的 Keep-Alive，是由<strong>应用层（用户态）</strong> 实现的，称为 HTTP 长连接；</li>
+<li>TCP 的 Keepalive，是由 <strong>TCP 层（内核态）</strong> 实现的，称为 TCP 保活机制；</li>
+</ul>
+<p><strong>TCP 协议有什么缺陷？</strong></p>
+<ul>
+<li>升级 TCP 的工作很困难；</li>
+<li>TCP 建立连接的延迟；</li>
+<li>TCP 存在队头阻塞问题；</li>
+<li>网络迁移需要重新建立 TCP 连接；</li>
+</ul>
+<p><strong>如何基于 UDP 协议实现可靠传输</strong></p>
+<p><strong>可靠传输</strong>：QUIC 通过单向递增的 Packet Number，配合 Stream ID 与 Offset 字段信息，可以支持乱序确认而不影响数据包的正确组装，摆脱了TCP 必须按顺序确认应答 ACK 的限制，解决了 TCP 因某个数据包重传而阻塞后续所有待发送数据包的问题</p>
+<p><strong>队头堵塞</strong>：QUIC 给每一个 Stream 都分配了一个独立的滑动窗口，这样使得一个连接上的多个 Stream 之间没有依赖关系，都是相互独立的，各自控制的滑动窗口。</p>
+<p><strong>流量控制</strong>：通过 window_update 帧告诉对端自己可以接收的字节数，这样发送方就不会发送超过这个数量的数据。通过 BlockFrame 告诉对端由于流量控制被阻塞了，无法发送数据。</p>
+<ul>
+<li><strong>Stream 级别的流量控制</strong>：Stream 可以认为就是一条 HTTP 请求，每个 Stream 都有独立的滑动窗口，所以每个 Stream 都可以做流量控制，防止单个 Stream 消耗连接（Connection）的全部接收缓冲。</li>
+<li><strong>Connection 流量控制</strong>：限制连接中所有 Stream 相加起来的总字节数，防止发送方超过连接的缓冲容量。</li>
+</ul>
+<p><strong>拥塞控制</strong>：QUIC 可以随浏览器更新，QUIC 的拥塞控制算法就可以有较快的迭代速度，可以针对不同的应用设置不同的拥塞控制算法。</p>
+<p><strong>连接建立</strong>：QUIC 内部包含了 TLS，它在自己的帧会携带 TLS 里的“记录”，再加上 QUIC 使用的是 TLS1.3，因此仅需 1 个 RTT 就可以「同时」完成建立连接与密钥协商，甚至在第二次连接的时候，应用数据包可以和 QUIC 握手信息（连接信息 + TLS 信息）一起发送，达到 0-RTT 的效果。</p>
+<p><strong>迁移连接</strong>：QUIC 协议没有用四元组的方式来“绑定”连接，而是通过连接 ID来标记通信的两个端点，客户端和服务器可以各自选择一组 ID 来标记自己，因此即使移动设备的网络变化后，导致 IP 地址变化了，只要仍保有上下文信息（比如连接 ID、TLS 密钥等），就可以“无缝”地复用原连接，消除重连的成本，没有丝毫卡顿感，达到了连接迁移的功能。</p>
 
 </article>
     
