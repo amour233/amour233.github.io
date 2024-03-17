@@ -7,15 +7,15 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="八股总结计算机网络1.基础篇TCP&#x2F;IP网络模型有几层 自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识网络">
+<meta name="description" content="八股总结一、计算机网络1.基础篇TCP&#x2F;IP网络模型有几层 自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="八股总结">
 <meta property="og:url" content="http://example.com/2024/03/15/%E5%85%AB%E8%82%A1%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="A door of a new world">
-<meta property="og:description" content="八股总结计算机网络1.基础篇TCP&#x2F;IP网络模型有几层 自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识网络">
+<meta property="og:description" content="八股总结一、计算机网络1.基础篇TCP&#x2F;IP网络模型有几层 自顶向下分别有应用层，传输层，网络层，网络接口层， 应用层协议：HTTP、FTP、TeLent、DNS、SMTP 传输层协议：TCP和UDP 网络层协议：IP(ICMP和ARP) 网络接口层主要为网络层提供「链路级别」传输的服务，负责在以太网、WiFi 这样的底层网络上发送原始数据包，工作在网卡这个层次，使用 MAC 地址来标识">
 <meta property="og:locale">
 <meta property="article:published_time" content="2024-03-15T00:38:32.517Z">
-<meta property="article:modified_time" content="2024-03-16T10:35:21.672Z">
+<meta property="article:modified_time" content="2024-03-17T01:32:03.406Z">
 <meta property="article:author" content="Amour">
 <meta name="twitter:card" content="summary">
 
@@ -63,7 +63,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"Amour","root":"/","typed_text":["player"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","appleTouchIcon":"log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"03/11/2024 9:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"covers":["http://www.horosama.com/api/img/pc/pc_1.jpg","http://www.horosama.com/api/img/pc/pc_2.jpg","http://www.horosama.com/api/img/pc/pc_3.jpg","https://tc.dhmip.cn/imgs/2024/03/14/01347010cb647499.jpg","https://tc.dhmip.cn/imgs/2024/03/14/0b072f1593960745.jpg","https://tc.dhmip.cn/imgs/2024/03/14/1f0d740bcbb4adf7.jpeg","https://images.wallpaperscraft.com/image/single/girl_hood_ears_1013418_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_cloak_hood_984627_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_umbrella_anime_141156_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_gesture_jewelry_966884_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_fish_1005833_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_glance_eyes_1157756_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_neko_heterochromia_1162566_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_googles_anime_1156985_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_cute_ball_127642_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_animal_smoke_1190449_1280x720.jpg","https://images.wallpaperscraft.com/image/single/kitten_lying_baby_115235_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_anime_food_671_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_hair_849710_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_dress_1064277_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_headphones_anime_1079499_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_horns_forest_1066754_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_demon_horns_1085787_1280x720.jpg"]};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-16 18:35:21"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-17 09:32:03"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -379,7 +379,7 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="八股总结"><a href="#八股总结" class="headerlink" title="八股总结"></a><a target="_blank" rel="noopener" href="https://www.xiaolincoding.com/">八股总结</a></h1><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="1-基础篇"><a href="#1-基础篇" class="headerlink" title="1.基础篇"></a>1.基础篇</h3><p><strong>TCP&#x2F;IP网络模型有几层</strong></p>
+    <h1 id="八股总结"><a href="#八股总结" class="headerlink" title="八股总结"></a><a target="_blank" rel="noopener" href="https://www.xiaolincoding.com/">八股总结</a></h1><h2 id="一、计算机网络"><a href="#一、计算机网络" class="headerlink" title="一、计算机网络"></a>一、计算机网络</h2><h3 id="1-基础篇"><a href="#1-基础篇" class="headerlink" title="1.基础篇"></a>1.基础篇</h3><p><strong>TCP&#x2F;IP网络模型有几层</strong></p>
 <p>自顶向下分别有应用层，传输层，网络层，网络接口层，</p>
 <p>应用层协议：HTTP、FTP、TeLent、DNS、SMTP</p>
 <p>传输层协议：TCP和UDP</p>
@@ -754,7 +754,42 @@
 <p><strong>拥塞控制</strong>：QUIC 可以随浏览器更新，QUIC 的拥塞控制算法就可以有较快的迭代速度，可以针对不同的应用设置不同的拥塞控制算法。</p>
 <p><strong>连接建立</strong>：QUIC 内部包含了 TLS，它在自己的帧会携带 TLS 里的“记录”，再加上 QUIC 使用的是 TLS1.3，因此仅需 1 个 RTT 就可以「同时」完成建立连接与密钥协商，甚至在第二次连接的时候，应用数据包可以和 QUIC 握手信息（连接信息 + TLS 信息）一起发送，达到 0-RTT 的效果。</p>
 <p><strong>迁移连接</strong>：QUIC 协议没有用四元组的方式来“绑定”连接，而是通过连接 ID来标记通信的两个端点，客户端和服务器可以各自选择一组 ID 来标记自己，因此即使移动设备的网络变化后，导致 IP 地址变化了，只要仍保有上下文信息（比如连接 ID、TLS 密钥等），就可以“无缝”地复用原连接，消除重连的成本，没有丝毫卡顿感，达到了连接迁移的功能。</p>
-
+<p><strong>TCP 和 UDP 可以同时绑定相同的端口吗？</strong></p>
+<p>可以的，在数据链路层中，通过 MAC 地址来寻找局域网中的主机。在网际层中，通过 IP 地址来寻找网络中互连的主机或路由器。在传输层中，需要通过端口进行寻址，来识别同一计算机中同时通信的不同应用程序。所以，传输层的「端口号」的作用，是为了区分同一个主机上不同应用程序的数据包。传输层有两个传输协议分别是 TCP 和 UDP，在内核中是两个完全独立的软件模块。当主机收到数据包后，可以在 IP 包头的「协议号」字段知道该数据包是 TCP&#x2F;UDP，所以可以根据这个信息确定送给哪个模块（TCP&#x2F;UDP）处理，送给 TCP&#x2F;UDP 模块的报文根据「端口号」确定送给哪个应用程序处理。</p>
+<p><strong>多个 TCP 服务进程可以绑定同一个端口吗？</strong></p>
+<p>如果两个 TCP 服务进程同时绑定的 IP 地址和端口都相同，那么执行 bind() 时候就会出错，错误是“Address already in use”。</p>
+<p><strong>客户端的端口可以重复使用吗？</strong></p>
+<p>TCP 连接是由四元组（源IP地址，源端口，目的IP地址，目的端口）唯一确认的，那么只要四元组中其中一个元素发生了变化，那么就表示不同的 TCP 连接的。所以如果客户端已使用端口 64992 与服务端 A 建立了连接，那么客户端要与服务端 B 建立连接，还是可以使用端口 64992 的，因为内核是通过四元祖信息来定位一个 TCP 连接的，并不会因为客户端的端口号相同，而导致连接冲突的问题。</p>
+<p><strong>服务端没有 listen，客户端发起连接建立，会发生什么？</strong></p>
+<p>服务端如果只 bind 了 IP 地址和端口，而没有调用 listen 的话，然后客户端对服务端发起了连接建立，服务端会回 RST 报文。</p>
+<p><strong>不使用 listen ，可以建立 TCP 连接吗？</strong></p>
+<p>是可以的，客户端是可以自己连自己的形成连接（TCP自连接），也可以两个客户端同时向对方发出请求建立连接（TCP同时打开），这两个情况都有个共同点，就是没有服务端参与，也就是没有listen，就能建立连接。</p>
+<p>在 TCP 自连接的情况中，客户端在 connect 方法时，最后会将自己的连接信息放入到这个全局 hash 表中，然后将信息发出，消息在经过回环地址重新回到 TCP 传输层的时候，就会根据 IP + 端口信息，再一次从这个全局 hash 中取出信息。于是握手包一来一回，最后成功建立连接。</p>
+<p><strong>没有 accept，能建立 TCP 连接吗？</strong></p>
+<ul>
+<li><strong>每一个</strong><code>socket</code>执行<code>listen</code>时，内核都会自动创建一个半连接队列和全连接队列。</li>
+<li>第三次握手前，TCP连接会放在半连接队列中，直到第三次握手到来，才会被放到全连接队列中。</li>
+<li><code>accept方法</code>只是为了从全连接队列中拿出一条连接，本身跟三次握手几乎<strong>毫无关系</strong>。</li>
+<li>出于效率考虑，虽然都叫队列，但半连接队列其实被设计成了<strong>哈希表</strong>，而全连接队列本质是链表。</li>
+<li>全连接队列满了，再来第三次握手也会丢弃，此时如果<code>tcp_abort_on_overflow=1</code>，还会直接发<code>RST</code>给客户端。</li>
+<li>半连接队列满了，可能是因为受到了<code>SYN Flood</code>攻击，可以设置<code>tcp_syncookies</code>，绕开半连接队列。</li>
+<li>客户端没有半连接队列和全连接队列，但有一个<strong>全局hash</strong>，可以通过它实现自连接或TCP同时打开。</li>
+</ul>
+<h3 id="4-IP篇"><a href="#4-IP篇" class="headerlink" title="4.IP篇"></a>4.IP篇</h3><p><strong>IP地址的分类</strong></p>
+<ul>
+<li>A类地址：0 + 7位网络号 + 24位主机位 </li>
+<li>B类地址：10 + 14位网络号 + 16位主机号</li>
+<li>C类地址：110 + 21位网络号 + 8位主机号</li>
+<li>D类地址：1110 + 28位组播地址</li>
+<li>E类地址：1111 + 留待后用</li>
+</ul>
+<p><strong>断网了，还能 ping 通 127.0.0.1 吗？</strong></p>
+<ul>
+<li><code>127.0.0.1</code> 是<strong>回环地址</strong>。<code>localhost</code>是<strong>域名</strong>，但默认等于 <code>127.0.0.1</code>。</li>
+<li><code>ping</code> 回环地址和 <code>ping</code> 本机地址，是一样的，走的是<strong>lo0 “假网卡”<strong>，都会经过网络层和数据链路层等逻辑，最后在快要出网卡前</strong>狠狠拐了个弯</strong>， 将数据插入到一个<strong>链表</strong>后就<strong>软中断</strong>通知 <strong>ksoftirqd</strong> 来进行<strong>收数据</strong>的逻辑，<strong>压根就不出网络</strong>。所以断网了也能 <code>ping</code> 通回环地址。</li>
+<li>如果服务器 <code>listen</code> 的是 <code>0.0.0.0</code>，那么此时用<code>127.0.0.1</code>和本机地址<strong>都可以</strong>访问到服务。</li>
+</ul>
+<h2 id="二、操作系统"><a href="#二、操作系统" class="headerlink" title="二、操作系统"></a>二、操作系统</h2>
 </article>
     
     
@@ -891,7 +926,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="八股总结"><a rel="nofollow" class="trm-toc-link" href="#八股总结"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">八股总结</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="计算机网络"><a rel="nofollow" class="trm-toc-link" href="#计算机网络"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">计算机网络</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="1.基础篇"><a rel="nofollow" class="trm-toc-link" href="#1-基础篇"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">1.基础篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="2.HTTP篇"><a rel="nofollow" class="trm-toc-link" href="#2-HTTP篇"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">2.HTTP篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="3. TCP篇"><a rel="nofollow" class="trm-toc-link" href="#3-TCP篇"><span class="trm-toc-number">1.1.3.</span> <span class="trm-toc-text">3. TCP篇</span></a></li></ol></li></ol></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="八股总结"><a rel="nofollow" class="trm-toc-link" href="#八股总结"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">八股总结</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="一、计算机网络"><a rel="nofollow" class="trm-toc-link" href="#一、计算机网络"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">一、计算机网络</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="1.基础篇"><a rel="nofollow" class="trm-toc-link" href="#1-基础篇"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">1.基础篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="2.HTTP篇"><a rel="nofollow" class="trm-toc-link" href="#2-HTTP篇"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">2.HTTP篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="3. TCP篇"><a rel="nofollow" class="trm-toc-link" href="#3-TCP篇"><span class="trm-toc-number">1.1.3.</span> <span class="trm-toc-text">3. TCP篇</span></a></li><li class="trm-toc-item trm-toc-level-3" title="4.IP篇"><a rel="nofollow" class="trm-toc-link" href="#4-IP篇"><span class="trm-toc-number">1.1.4.</span> <span class="trm-toc-text">4.IP篇</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="二、操作系统"><a rel="nofollow" class="trm-toc-link" href="#二、操作系统"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">二、操作系统</span></a></li></ol></li></ol>
       </div>
     </div>
 
