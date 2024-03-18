@@ -7,16 +7,21 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A door of a new world">
-<meta property="og:url" content="http://example.com/archives/2024/03/index.html">
+<meta name="description" content="面试经历3.13 童程童美一面 上来先自我介绍 问了了解哪些数据结构 递归函数的含义，举一个例子 栈和队列的区别 然后开始在oj上笔试，10道题两小时，  3.18 OPPO测开一面 自我介绍 开始长达20多分钟的项目拷打 进程和线程的区别 设计一下b站弹幕躲避人头像的测试用例 反问  3.18 字节测开一面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试经历.md">
+<meta property="og:url" content="http://example.com/2024/03/18/%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%8E%86-md/index.html">
 <meta property="og:site_name" content="A door of a new world">
+<meta property="og:description" content="面试经历3.13 童程童美一面 上来先自我介绍 问了了解哪些数据结构 递归函数的含义，举一个例子 栈和队列的区别 然后开始在oj上笔试，10道题两小时，  3.18 OPPO测开一面 自我介绍 开始长达20多分钟的项目拷打 进程和线程的区别 设计一下b站弹幕躲避人头像的测试用例 反问  3.18 字节测开一面">
 <meta property="og:locale">
+<meta property="article:published_time" content="2024-03-18T04:25:52.000Z">
+<meta property="article:modified_time" content="2024-03-18T04:32:44.300Z">
 <meta property="article:author" content="Amour">
+<meta property="article:tag" content="春招">
 <meta name="twitter:card" content="summary">
 
 
-<title >A door of a new world</title>
+<title >面试经历.md</title>
 
 <!-- Favicon -->
 
@@ -59,7 +64,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"Amour","root":"/","typed_text":["player"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","appleTouchIcon":"log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"03/11/2024 9:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"covers":["http://www.horosama.com/api/img/pc/pc_1.jpg","http://www.horosama.com/api/img/pc/pc_2.jpg","http://www.horosama.com/api/img/pc/pc_3.jpg","https://tc.dhmip.cn/imgs/2024/03/14/01347010cb647499.jpg","https://tc.dhmip.cn/imgs/2024/03/14/0b072f1593960745.jpg","https://tc.dhmip.cn/imgs/2024/03/14/1f0d740bcbb4adf7.jpeg","https://images.wallpaperscraft.com/image/single/girl_hood_ears_1013418_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_cloak_hood_984627_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_umbrella_anime_141156_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_gesture_jewelry_966884_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_fish_1005833_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_glance_eyes_1157756_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_neko_heterochromia_1162566_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_googles_anime_1156985_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_cute_ball_127642_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_animal_smoke_1190449_1280x720.jpg","https://images.wallpaperscraft.com/image/single/kitten_lying_baby_115235_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_anime_food_671_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_hair_849710_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_dress_1064277_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_headphones_anime_1079499_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_horns_forest_1066754_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_demon_horns_1085787_1280x720.jpg"]};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2024-03-18 12:34:06"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-18 12:32:44"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -221,10 +226,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            The article archive
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            云间连下榻，<br>天上接行杯。
+                            面试经历.md
                         </h1>
 
                         
@@ -234,7 +239,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        archives
+                                        2024
                                     </span>
                                 </li>
                             </ul>
@@ -353,95 +358,140 @@
             
             <div class="trm-page-content col-lg-8">
                 <div id="trm-content" class="trm-content">
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list" style="margin-bottom: 0px;"><li class="col-lg-4 trm-list-item" style="margin: 6px 0;"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">（3）</span></li></ul>
-                
-            </div>
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/18
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            12:25
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            Amour
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="面试经历"><a href="#面试经历" class="headerlink" title="面试经历"></a>面试经历</h1><h2 id="3-13-童程童美一面"><a href="#3-13-童程童美一面" class="headerlink" title="3.13 童程童美一面"></a>3.13 童程童美一面</h2><ol>
+<li>上来先自我介绍</li>
+<li>问了了解哪些数据结构</li>
+<li>递归函数的含义，举一个例子</li>
+<li>栈和队列的区别</li>
+<li>然后开始在oj上笔试，10道题两小时，</li>
+</ol>
+<h2 id="3-18-OPPO测开一面"><a href="#3-18-OPPO测开一面" class="headerlink" title="3.18 OPPO测开一面"></a>3.18 OPPO测开一面</h2><ol>
+<li>自我介绍</li>
+<li>开始长达20多分钟的项目拷打</li>
+<li>进程和线程的区别</li>
+<li>设计一下b站弹幕躲避人头像的测试用例</li>
+<li>反问</li>
+</ol>
+<h2 id="3-18-字节测开一面"><a href="#3-18-字节测开一面" class="headerlink" title="3.18 字节测开一面"></a>3.18 字节测开一面</h2>
+</article>
+    
+    
 
-<!-- history -->
-
-<div class="row">
+</div>
+<div class="trm-post-next-prev row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                2024 年的归档
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/03/15/%E5%85%AB%E8%82%A1%E6%80%BB%E7%BB%93/" class="trm-cover-frame trm-anima-link">
             
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2024/03/18/%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%8E%86-md/" class="trm-anima-link">
-                                    面试经历.md
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
+            
+                <div class="trm-cover-img" data-random-img></div>
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E5%85%AB%E8%82%A1/">
+                    八股
+                </a>
             </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2024/03/15/%E5%85%AB%E8%82%A1%E6%80%BB%E7%BB%93/" class="trm-anima-link">
-                                    八股总结
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2024/03/12/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95(%E5%8A%9B%E6%89%A3%E7%83%AD%E9%A2%98100)/" class="trm-anima-link">
-                                    刷题记录(力扣热题100)
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
+            <h5>
+                <a href="/2024/03/15/%E5%85%AB%E8%82%A1%E6%80%BB%E7%BB%93/" class="trm-anima-link">
+                    八股总结
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/03/15</li>
+                <li>08:38</li>
+                
+                    <li>11.6k</li>
+                
+                
+                    <li>41</li>
+                
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
+    
 
+    <div id="giscus-wrap" class="trm-card trm-scroll-animation comment-container"></div>
+<script data-swup-reload-script>
+    function loadGiscus() {
+        let nowTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+        const config = {
+            src: 'https://giscus.app/client.js',
+            "data-repo": 'amour233/giscus',
+            "data-repo-id": 'R_kgDOLfPsGA',
+            "data-category": 'Announcements',
+            "data-category-id": 'DIC_kwDOLfPsGM4Cd6e0',
+            "data-mapping": 'title',
+            "data-reactions-enabled": '1',
+            "data-emit-metadata": '0',
+            "data-theme": nowTheme,
+            "data-lang": 'zh-CN',
+            crossorigin: "anonymous",
+            async: true
+        }
+        let ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+        document.getElementById('giscus-wrap').insertAdjacentElement('afterbegin', ele)
+    }
 
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
+    function changeGiscusTheme() {
+        let theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
 
+        function sendMessage(message) {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return;
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
 
+        sendMessage({
+            setConfig: {
+                theme: theme
+            }
+        });
+    }
+
+    loadGiscus();
+</script>
 
 
 
@@ -473,9 +523,29 @@
 
             
 
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="面试经历"><a rel="nofollow" class="trm-toc-link" href="#面试经历"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">面试经历</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="3.13 童程童美一面"><a rel="nofollow" class="trm-toc-link" href="#3-13-童程童美一面"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">3.13 童程童美一面</span></a></li><li class="trm-toc-item trm-toc-level-2" title="3.18 OPPO测开一面"><a rel="nofollow" class="trm-toc-link" href="#3-18-OPPO测开一面"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">3.18 OPPO测开一面</span></a></li><li class="trm-toc-item trm-toc-level-2" title="3.18 字节测开一面"><a rel="nofollow" class="trm-toc-link" href="#3-18-字节测开一面"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">3.18 字节测开一面</span></a></li></ol></li></ol>
+      </div>
+    </div>
+
             
 <div class="trm-fixed-container">
     
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
     <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
@@ -510,6 +580,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
