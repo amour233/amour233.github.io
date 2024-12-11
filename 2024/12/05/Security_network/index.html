@@ -7,12 +7,12 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="广播网络实验Ubuntu版本为22.04，参考原文章 1.下载mininet，搭建环境安装好虚拟机之后，先进行update，然后根据ppt中的第一个命令下载mininet  发现会有问题，只能使用第二个命令进行安装，成功后进行验证。  输入 12sudo mn&#x2F;&#x2F;进入到mininet中pingall&#x2F;&#x2F;来检测是否成功  2.函数编写根据ppt内的要求，阅读代码后实现broadcast_packet">
+<meta name="description" content="参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_44357071&#x2F;article&#x2F;details&#x2F;135000825 网络协议安全的一些实验报告链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1e642cnnsqS3hmhKAKMpb2g?pwd&#x3D;le5d提取码：le5d 结果总结被感染的主机IP为10.8.19.101，MAC地址为00:08:02:1c:47:ae SHA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算机网络大作业">
-<meta property="og:url" content="http://example.com/2024/11/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%A7%E4%BD%9C%E4%B8%9A/index.html">
+<meta property="og:title" content="网络协议安全大作业">
+<meta property="og:url" content="http://example.com/2024/12/05/Security_network/index.html">
 <meta property="og:site_name" content="Welcome to my world！">
-<meta property="og:description" content="广播网络实验Ubuntu版本为22.04，参考原文章 1.下载mininet，搭建环境安装好虚拟机之后，先进行update，然后根据ppt中的第一个命令下载mininet  发现会有问题，只能使用第二个命令进行安装，成功后进行验证。  输入 12sudo mn&#x2F;&#x2F;进入到mininet中pingall&#x2F;&#x2F;来检测是否成功  2.函数编写根据ppt内的要求，阅读代码后实现broadcast_packet">
+<meta property="og:description" content="参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_44357071&#x2F;article&#x2F;details&#x2F;135000825 网络协议安全的一些实验报告链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1e642cnnsqS3hmhKAKMpb2g?pwd&#x3D;le5d提取码：le5d 结果总结被感染的主机IP为10.8.19.101，MAC地址为00:08:02:1c:47:ae SHA">
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/img/404.jpg">
 <meta property="og:image" content="http://example.com/img/404.jpg">
@@ -35,14 +35,16 @@
 <meta property="og:image" content="http://example.com/img/404.jpg">
 <meta property="og:image" content="http://example.com/img/404.jpg">
 <meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="article:published_time" content="2024-11-26T07:33:20.837Z">
-<meta property="article:modified_time" content="2024-11-29T07:04:23.636Z">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="article:published_time" content="2024-12-05T11:59:57.306Z">
+<meta property="article:modified_time" content="2024-12-11T08:15:23.717Z">
 <meta property="article:author" content="北冥">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/img/404.jpg">
 
 
-<title >计算机网络大作业</title>
+<title >网络协议安全大作业</title>
 
 <!-- Favicon -->
 
@@ -87,7 +89,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"北冥","root":"/","typed_text":["believe yourself everytime"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","apple_touch_icon":null,"webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！","appleTouchIcon":"log.svg","showText":"(/≧▽≦/)欢迎回来！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":false,"title":"default","height_limit":200},"toc":{"post_title":false},"live_time":{"start_time":"03/11/2024 9:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"covers":["http://www.horosama.com/api/img/pc/pc_1.jpg","http://www.horosama.com/api/img/pc/pc_2.jpg","http://www.horosama.com/api/img/pc/pc_3.jpg","https://tc.dhmip.cn/imgs/2024/03/14/01347010cb647499.jpg","https://tc.dhmip.cn/imgs/2024/03/14/0b072f1593960745.jpg","https://tc.dhmip.cn/imgs/2024/03/14/1f0d740bcbb4adf7.jpeg","https://images.wallpaperscraft.com/image/single/girl_hood_ears_1013418_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_cloak_hood_984627_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_umbrella_anime_141156_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_gesture_jewelry_966884_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_fish_1005833_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_glance_eyes_1157756_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_neko_heterochromia_1162566_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_googles_anime_1156985_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_cute_ball_127642_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_animal_smoke_1190449_1280x720.jpg","https://images.wallpaperscraft.com/image/single/kitten_lying_baby_115235_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_anime_food_671_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_hair_849710_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_dress_1064277_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_headphones_anime_1079499_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_horns_forest_1066754_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_demon_horns_1085787_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_sadness_492077_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_snowman_snow_578103_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_dog_flowers_462265_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_arch_chair_204932_1280x720.jpg","https://images.wallpaperscraft.com/image/single/magician_dragon_art_131303_1280x720.jpg","https://images.wallpaperscraft.com/image/single/deer_planet_art_129712_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sakura_flowers_bloom_125940_1280x720.jpg","https://images.wallpaperscraft.com/image/single/chip_circuit_processor_140251_1280x720.jpg","https://images.wallpaperscraft.com/image/single/keyboard_laptop_gradient_203739_1280x720.jpg","https://images.wallpaperscraft.com/image/single/binary_code_code_numbers_147523_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_galaxy_universe_121293_1280x720.jpg","https://images.wallpaperscraft.com/image/single/space_planets_takeoff_96455_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_light_spots_86643_1280x720.jpg","https://images.wallpaperscraft.com/image/single/starry_sky_boat_reflection_125803_1280x720.jpg","https://images.wallpaperscraft.com/image/single/treble_clef_musical_notes_multicolored_121263_1280x720.jpg","https://images.wallpaperscraft.com/image/single/saxophone_lighting_abstraction_121900_1280x720.jpg","https://images.wallpaperscraft.com/image/single/wolf_howl_silhouette_128733_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sakura_rainbow_art_127295_1280x720.jpg","https://images.wallpaperscraft.com/image/single/leaves_twigs_needles_92119_1280x720.jpg","https://images.wallpaperscraft.com/image/single/ladybug_drop_surface_106249_1280x720.jpg","https://images.wallpaperscraft.com/image/single/drop_liquid_closeup_121838_1280x720.jpg","https://images.wallpaperscraft.com/image/single/drops_rain_glass_120628_1280x720.jpg","https://images.wallpaperscraft.com/image/single/grass_sunlight_sunset_90198_1280x720.jpg","https://images.wallpaperscraft.com/image/single/landscape_mountains_sun_140434_1280x720.jpg","https://images.wallpaperscraft.com/image/single/forest_fog_trees_126479_1280x720.jpg","https://images.wallpaperscraft.com/image/single/bridge_river_flow_100663_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sea_sunset_art_131736_1280x720.jpg","https://images.wallpaperscraft.com/image/single/eruption_lava_volcano_45542_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sea_sunset_horizon_131804_1280x720.jpg","https://images.wallpaperscraft.com/image/single/forest_fog_trees_128751_1280x720.jpg","https://images.wallpaperscraft.com/image/single/night_city_aerial_view_lights_city_134887_1280x720.jpg","https://images.wallpaperscraft.com/image/single/city_aerial_view_road_156925_1280x720.jpg","https://images.wallpaperscraft.com/image/single/city_night_panorama_117682_1280x720.jpg","https://images.wallpaperscraft.com/image/single/mclaren_p1_gtr_mclaren_p1_mclaren_128793_1280x720.jpg","https://images.wallpaperscraft.com/image/single/hologram_scheme_scifi_139294_1280x720.jpg","https://images.wallpaperscraft.com/image/single/computer_light_neon_50557_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_galaxy_universe_121293_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planets_galaxy_stars_146448_1280x720.jpg"]};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-11-29 15:04:23"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-12-11 16:15:23"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.4" id="trm-switch-style">
@@ -253,7 +255,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            计算机网络大作业
+                            网络协议安全大作业
                         </h1>
 
                         
@@ -382,13 +384,13 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-            11/26
+            12/05
         </div>
     </div>
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            15:33
+            19:59
         </div>
     </div>
     <div class="col-sm-4">
@@ -400,56 +402,56 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="广播网络实验"><a href="#广播网络实验" class="headerlink" title="广播网络实验"></a>广播网络实验</h1><p>Ubuntu版本为22.04，<a target="_blank" rel="noopener" href="https://juejin.cn/post/7172005125307760677">参考原文章</a></p>
-<h2 id="1-下载mininet，搭建环境"><a href="#1-下载mininet，搭建环境" class="headerlink" title="1.下载mininet，搭建环境"></a>1.下载mininet，搭建环境</h2><p>安装好虚拟机之后，先进行update，然后根据ppt中的第一个命令下载mininet</p>
-<p><img src="/../imgs/1.png" alt="1"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>发现会有问题，只能使用第二个命令进行安装，成功后进行验证。</p>
-<p><img src="/../imgs/2.png" alt="2"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mn//进入到mininet中</span><br><span class="line">pingall//来检测是否成功</span><br></pre></td></tr></table></figure>
+    <p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44357071/article/details/135000825">https://blog.csdn.net/weixin_44357071/article/details/135000825</a></p>
+<p><strong>网络协议安全的一些实验报告</strong><br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1e642cnnsqS3hmhKAKMpb2g?pwd=le5d">https://pan.baidu.com/s/1e642cnnsqS3hmhKAKMpb2g?pwd=le5d</a><br>提取码：le5d</p>
+<h2 id="结果总结"><a href="#结果总结" class="headerlink" title="结果总结"></a>结果总结</h2><p>被感染的主机IP为10.8.19.101，MAC地址为00:08:02:1c:47:ae</p>
+<p>SHA256的值为：f25a780095730701efac67e9d5b84bc289afea56d96d8aff8a44af69ae606404</p>
+<h2 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h2><p>将压缩包放到虚拟机中进行解压后得到如下的内容</p>
+<p><img src="/../imgs/21.png" alt="21"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>打开pdf文件得到实验的要求</p>
+<p><img src="/../imgs/22.png"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="安装snort"><a href="#安装snort" class="headerlink" title="安装snort"></a>安装snort</h2><p>首先输入如下命令进行安装</p>
+<p><img src="/../imgs/23.png" alt="23"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>安装结束后，再输入如下命令，查看是否安装成功</p>
+<p><img src="/../imgs/24.png"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="导出http请求"><a href="#导出http请求" class="headerlink" title="导出http请求"></a>导出http请求</h2><p>右键pcap文件使用wireshark打开</p>
+<p><img src="/../imgs/25.png" alt="25"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>然后筛选出http的请求流量</p>
+<p><img src="/../imgs/26.png" alt="26"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>然后在文件中选择导出http，进行全部导出</p>
+<p><img src="/../imgs/27.png" alt="27"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>保存后得到如下的内容</p>
+<p><img src="/../imgs/28.png" alt="28"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="病毒分析"><a href="#病毒分析" class="headerlink" title="病毒分析"></a>病毒分析</h2><p>然后使用VirusToal网站进行病毒分析</p>
+<p><img src="/../imgs/29.png" alt="29"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>发现该文件被认定为病毒文件</p>
+<p><img src="/../imgs/30.png" alt="30"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>然后在命令行中输入如下命令发现该文件其实是windows中可执行文件，并计算了SHA256的值</p>
+<p><img src="/../imgs/31.png" alt="31"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>在wireshark中追踪http流，得到如下结果</p>
+<p><img src="/../imgs/41.png" alt="41"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>发现这里有一个get请求向185.244.41.29请求这个病毒文件，那么发出请求的就是被感染的主机，那么其IP地址为10.8.19.101，然后在wireshark中找到ARP协议的，可以找到该IP对应的MAC地址00:08:02:1c:47:ae</p>
+<p><img src="/../imgs/42.png" alt="42"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="snort规则筛选病毒"><a href="#snort规则筛选病毒" class="headerlink" title="snort规则筛选病毒"></a>snort规则筛选病毒</h2><p>将规则放在一个文件中，并放在snort的规则目录下（etc&#x2F;snort&#x2F;rules）</p>
+<p><img src="/../imgs/32.png" alt="32"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/../imgs/33.png" alt="33"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>然后打开snort的配置文件（&#x2F;etc&#x2F;snort&#x2F;snort.conf）再其中加入刚刚写好的规则</p>
+<p><img src="/../imgs/34.png" alt="34"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>然后重启snort，让配置文件生效或者也可以重新加载配置，让其在控制台显示警告</p>
+<p><img src="/../imgs/35.png" alt="35"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>然后查询本机的默认网卡和IP地址</p>
+<p><img src="/../imgs/36.png" alt="36"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>首先打开一个窗口追踪日志最后5行</p>
+<p><img src="/../imgs/37.png" alt="37"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>然后再开一个窗口运行读取malware.pcap文件，结果如下所示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/sbin/snort -d -l /var/log/snort/ -c /etc/snort/snort.conf -r pcap文件地址 </span><br></pre></td></tr></table></figure>
 
-<h2 id="2-函数编写"><a href="#2-函数编写" class="headerlink" title="2.函数编写"></a>2.函数编写</h2><p>根据ppt内的要求，阅读代码后实现broadcast_packet函数</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">broadcast_packet</span><span class="params">(<span class="type">iface_info_t</span> *iface, <span class="type">const</span> <span class="type">char</span> *packet, <span class="type">int</span> len)</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> broadcast packet</span></span><br><span class="line">    <span class="built_in">fprintf</span>(<span class="built_in">stdout</span>, <span class="string">&quot;TODO: broadcast packet.\n&quot;</span>);</span><br><span class="line">    <span class="type">iface_info_t</span> *other_iface = <span class="literal">NULL</span>;   <span class="comment">//定义其它端口</span></span><br><span class="line">    list_for_each_entry(other_iface, &amp;instance-&gt;iface_list, <span class="built_in">list</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (other_iface-&gt;fd != iface-&gt;fd)</span><br><span class="line">            iface_send_packet(other_iface, packet, len);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="/../imgs/3.png" alt="3"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>不过放在这里make的话会报错，二次定义，需要把这个函数放在broadcast.c文件中就可以了。</p>
-<p>在Ubuntu中进入到目录下进行make操作会生成一个hub文件</p>
-<p><img src="/../imgs/4.png" alt="4"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/../imgs/5.png" alt="5"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h2 id="3-实现节点广播逻辑"><a href="#3-实现节点广播逻辑" class="headerlink" title="3.实现节点广播逻辑"></a>3.实现节点广播逻辑</h2><p>使用python运行three_nodes_bw.py文件，这里可能会存在scripts下面两个脚本文件的权限不足的问题，给他们加上权限就行了</p>
-<p><img src="/../imgs/6.png" alt="6"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>使用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xterm h1 h2 h3 b1</span><br></pre></td></tr></table></figure>
-
-<p>打开四个窗口，并且在b1窗口中输入.&#x2F;hub运行文件</p>
-<p><img src="/../imgs/7.png" alt="7"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>使用pingall命令后发现h1和h2无法ping到h3，查看h1的arp表后发现h3没有mac地址我们可以手动加上</p>
-<p><img src="/../imgs/8.png" alt="8"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>在h1和h2表中加入后就可以ping通了，下面是h1ping h2和h3</p>
-<p><img src="/../imgs/8.5.png" alt="8.5"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/../imgs/9.png" alt="9"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>h2来ping其余两个</p>
-<p><img src="/../imgs/10.png" alt="10"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/../imgs/11.png" alt="11"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>h3ping剩余两个</p>
-<p><img src="/../imgs/12.png" alt="12"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/../imgs/13.png" alt="13"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h2 id="4-广播网络传输效率"><a href="#4-广播网络传输效率" class="headerlink" title="4.广播网络传输效率"></a>4.广播网络传输效率</h2><p>首先是情形1：利用h1同时给h2和h3发数据</p>
-<p><img src="/../imgs/14.png" alt="14"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>此时的效率为9.10&#x2F;10*100% &#x3D; 91.0%和9.07&#x2F;10 * 100% &#x3D; 90.7%</p>
-<p>然后是情形2：h2和h3同时给h1发消息</p>
-<p><img src="/../imgs/15.png" alt="15"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>此时的效率为8.70 &#x2F; 10 * 100 % &#x3D; 87.0%和8.69 &#x2F; 10 * 100% &#x3D; 86.9%</p>
-<h2 id="5-广播网络产生数据环路"><a href="#5-广播网络产生数据环路" class="headerlink" title="5.广播网络产生数据环路"></a>5.广播网络产生数据环路</h2><p>首先我们需要根据给出的py文件构建出环路的代码，修改代码如下</p>
-<p><img src="/../imgs/16.png" alt="16"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>然后使用运行ring_topo.py文件，然后使用xterm打开五个窗口</p>
-<p><img src="/../imgs/17.png" alt="17"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>然后在b1、b2和b3窗口中运行.&#x2F;hub将其设为集线器</p>
-<p><a href=""><img src="/../imgs/18.png" alt="18"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
-<p>然后在h1中窗口中ping主机h2</p>
-<p><img src="/../imgs/19.png" alt="19"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>再在h1中打开wireshark进行抓包，发现一个数据包</p>
-<p><img src="/../imgs/20.png" alt="20"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/../imgs/39.png" alt="39"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>snort会对文件进行扫描并给出相应的提醒，在日志中我们可以看到刚刚设置的提示</p>
+<p><img src="/../imgs/40.png" alt="40"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="选做"><a href="#选做" class="headerlink" title="选做"></a>选做</h2><p>打开微步在线云沙箱网站，上传病毒文件，发现其是DLL动态链接库文件，得到如下结果</p>
+<p><img src="/../imgs/43.png" alt="43"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/../imgs/44.png" alt="44"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 
 </article>
     
@@ -467,7 +469,7 @@
     
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2024/12/05/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8%E5%A4%A7%E4%BD%9C%E4%B8%9A/" class="trm-cover-frame trm-anima-link">
+        <a href="/2024/12/11/Matrix_job/" class="trm-cover-frame trm-anima-link">
             
             
                 <div class="trm-cover-img" data-random-img></div>
@@ -481,19 +483,19 @@
                 </a>
             </div>
             <h5>
-                <a href="/2024/12/05/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8%E5%A4%A7%E4%BD%9C%E4%B8%9A/" class="trm-anima-link">
-                    网络协议安全大作业
+                <a href="/2024/12/11/Matrix_job/" class="trm-anima-link">
+                    矩阵分析与应用大作业
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>24/12/05</li>
-                <li>19:59</li>
+                <li>24/12/11</li>
+                <li>16:16</li>
                 
-                    <li>579</li>
+                    <li>1.7k</li>
                 
                 
-                    <li>2</li>
+                    <li>9</li>
                 
             </ul>
         </div>
@@ -503,7 +505,7 @@
     
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2024/11/13/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BD%95/" class="trm-cover-frame trm-anima-link">
+        <a href="/2024/11/26/network/" class="trm-cover-frame trm-anima-link">
             
             
                 <div class="trm-cover-img" data-random-img></div>
@@ -517,19 +519,19 @@
                 </a>
             </div>
             <h5>
-                <a href="/2024/11/13/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BD%95/" class="trm-anima-link">
-                    论文阅读记录
+                <a href="/2024/11/26/network/" class="trm-anima-link">
+                    计算机网络大作业
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>24/11/13</li>
-                <li>22:17</li>
+                <li>24/11/26</li>
+                <li>15:33</li>
                 
-                    <li>299</li>
+                    <li>552</li>
                 
                 
-                    <li>1</li>
+                    <li>2</li>
                 
             </ul>
         </div>
@@ -634,7 +636,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="广播网络实验"><a rel="nofollow" class="trm-toc-link" href="#广播网络实验"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">广播网络实验</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="1.下载mininet，搭建环境"><a rel="nofollow" class="trm-toc-link" href="#1-下载mininet，搭建环境"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">1.下载mininet，搭建环境</span></a></li><li class="trm-toc-item trm-toc-level-2" title="2.函数编写"><a rel="nofollow" class="trm-toc-link" href="#2-函数编写"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">2.函数编写</span></a></li><li class="trm-toc-item trm-toc-level-2" title="3.实现节点广播逻辑"><a rel="nofollow" class="trm-toc-link" href="#3-实现节点广播逻辑"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">3.实现节点广播逻辑</span></a></li><li class="trm-toc-item trm-toc-level-2" title="4.广播网络传输效率"><a rel="nofollow" class="trm-toc-link" href="#4-广播网络传输效率"><span class="trm-toc-number">1.4.</span> <span class="trm-toc-text">4.广播网络传输效率</span></a></li><li class="trm-toc-item trm-toc-level-2" title="5.广播网络产生数据环路"><a rel="nofollow" class="trm-toc-link" href="#5-广播网络产生数据环路"><span class="trm-toc-number">1.5.</span> <span class="trm-toc-text">5.广播网络产生数据环路</span></a></li></ol></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-2" title="结果总结"><a rel="nofollow" class="trm-toc-link" href="#结果总结"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">结果总结</span></a></li><li class="trm-toc-item trm-toc-level-2" title="下载压缩包"><a rel="nofollow" class="trm-toc-link" href="#下载压缩包"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">下载压缩包</span></a></li><li class="trm-toc-item trm-toc-level-2" title="安装snort"><a rel="nofollow" class="trm-toc-link" href="#安装snort"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">安装snort</span></a></li><li class="trm-toc-item trm-toc-level-2" title="导出http请求"><a rel="nofollow" class="trm-toc-link" href="#导出http请求"><span class="trm-toc-number">4.</span> <span class="trm-toc-text">导出http请求</span></a></li><li class="trm-toc-item trm-toc-level-2" title="病毒分析"><a rel="nofollow" class="trm-toc-link" href="#病毒分析"><span class="trm-toc-number">5.</span> <span class="trm-toc-text">病毒分析</span></a></li><li class="trm-toc-item trm-toc-level-2" title="snort规则筛选病毒"><a rel="nofollow" class="trm-toc-link" href="#snort规则筛选病毒"><span class="trm-toc-number">6.</span> <span class="trm-toc-text">snort规则筛选病毒</span></a></li><li class="trm-toc-item trm-toc-level-2" title="选做"><a rel="nofollow" class="trm-toc-link" href="#选做"><span class="trm-toc-number">7.</span> <span class="trm-toc-text">选做</span></a></li></ol>
       </div>
     </div>
 
