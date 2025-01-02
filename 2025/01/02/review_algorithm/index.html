@@ -7,16 +7,20 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to my world！">
-<meta property="og:url" content="http://example.com/categories/%E7%A0%94%E7%A9%B6%E7%94%9F/index.html">
+<meta name="description" content="分治1. Longest Balance Substring题目A string is called “balanced” if, for every letter that appears in the string, both its uppercase and lowercase forms are present at least once. For example, aabAB is a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法分析与设计复习（oj和作业题目）">
+<meta property="og:url" content="http://example.com/2025/01/02/review_algorithm/index.html">
 <meta property="og:site_name" content="Welcome to my world！">
+<meta property="og:description" content="分治1. Longest Balance Substring题目A string is called “balanced” if, for every letter that appears in the string, both its uppercase and lowercase forms are present at least once. For example, aabAB is a">
 <meta property="og:locale">
+<meta property="article:published_time" content="2025-01-02T11:56:52.202Z">
+<meta property="article:modified_time" content="2025-01-02T13:10:46.660Z">
 <meta property="article:author" content="北冥">
 <meta name="twitter:card" content="summary">
 
 
-<title >Welcome to my world！</title>
+<title >算法分析与设计复习（oj和作业题目）</title>
 
 <!-- Favicon -->
 
@@ -61,7 +65,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"北冥","root":"/","typed_text":["believe yourself everytime"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","apple_touch_icon":null,"webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！","appleTouchIcon":"log.svg","showText":"(/≧▽≦/)欢迎回来！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":false,"title":"default","height_limit":200},"toc":{"post_title":false},"live_time":{"start_time":"03/11/2024 9:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"covers":["http://www.horosama.com/api/img/pc/pc_1.jpg","http://www.horosama.com/api/img/pc/pc_2.jpg","http://www.horosama.com/api/img/pc/pc_3.jpg","https://tc.dhmip.cn/imgs/2024/03/14/01347010cb647499.jpg","https://tc.dhmip.cn/imgs/2024/03/14/0b072f1593960745.jpg","https://tc.dhmip.cn/imgs/2024/03/14/1f0d740bcbb4adf7.jpeg","https://images.wallpaperscraft.com/image/single/girl_hood_ears_1013418_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_cloak_hood_984627_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_umbrella_anime_141156_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_gesture_jewelry_966884_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_fish_1005833_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_glance_eyes_1157756_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_neko_heterochromia_1162566_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_googles_anime_1156985_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_cute_ball_127642_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_animal_smoke_1190449_1280x720.jpg","https://images.wallpaperscraft.com/image/single/kitten_lying_baby_115235_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_anime_food_671_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_hair_849710_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_dress_1064277_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_headphones_anime_1079499_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_horns_forest_1066754_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_demon_horns_1085787_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_sadness_492077_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_snowman_snow_578103_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_dog_flowers_462265_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_arch_chair_204932_1280x720.jpg","https://images.wallpaperscraft.com/image/single/magician_dragon_art_131303_1280x720.jpg","https://images.wallpaperscraft.com/image/single/deer_planet_art_129712_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sakura_flowers_bloom_125940_1280x720.jpg","https://images.wallpaperscraft.com/image/single/chip_circuit_processor_140251_1280x720.jpg","https://images.wallpaperscraft.com/image/single/keyboard_laptop_gradient_203739_1280x720.jpg","https://images.wallpaperscraft.com/image/single/binary_code_code_numbers_147523_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_galaxy_universe_121293_1280x720.jpg","https://images.wallpaperscraft.com/image/single/space_planets_takeoff_96455_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_light_spots_86643_1280x720.jpg","https://images.wallpaperscraft.com/image/single/starry_sky_boat_reflection_125803_1280x720.jpg","https://images.wallpaperscraft.com/image/single/treble_clef_musical_notes_multicolored_121263_1280x720.jpg","https://images.wallpaperscraft.com/image/single/saxophone_lighting_abstraction_121900_1280x720.jpg","https://images.wallpaperscraft.com/image/single/wolf_howl_silhouette_128733_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sakura_rainbow_art_127295_1280x720.jpg","https://images.wallpaperscraft.com/image/single/leaves_twigs_needles_92119_1280x720.jpg","https://images.wallpaperscraft.com/image/single/ladybug_drop_surface_106249_1280x720.jpg","https://images.wallpaperscraft.com/image/single/drop_liquid_closeup_121838_1280x720.jpg","https://images.wallpaperscraft.com/image/single/drops_rain_glass_120628_1280x720.jpg","https://images.wallpaperscraft.com/image/single/grass_sunlight_sunset_90198_1280x720.jpg","https://images.wallpaperscraft.com/image/single/landscape_mountains_sun_140434_1280x720.jpg","https://images.wallpaperscraft.com/image/single/forest_fog_trees_126479_1280x720.jpg","https://images.wallpaperscraft.com/image/single/bridge_river_flow_100663_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sea_sunset_art_131736_1280x720.jpg","https://images.wallpaperscraft.com/image/single/eruption_lava_volcano_45542_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sea_sunset_horizon_131804_1280x720.jpg","https://images.wallpaperscraft.com/image/single/forest_fog_trees_128751_1280x720.jpg","https://images.wallpaperscraft.com/image/single/night_city_aerial_view_lights_city_134887_1280x720.jpg","https://images.wallpaperscraft.com/image/single/city_aerial_view_road_156925_1280x720.jpg","https://images.wallpaperscraft.com/image/single/city_night_panorama_117682_1280x720.jpg","https://images.wallpaperscraft.com/image/single/mclaren_p1_gtr_mclaren_p1_mclaren_128793_1280x720.jpg","https://images.wallpaperscraft.com/image/single/hologram_scheme_scifi_139294_1280x720.jpg","https://images.wallpaperscraft.com/image/single/computer_light_neon_50557_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_galaxy_universe_121293_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planets_galaxy_stars_146448_1280x720.jpg"]};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2025-01-02 21:11:22"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-01-02 21:10:46"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.4" id="trm-switch-style">
@@ -208,7 +212,7 @@
     <div class="trm-banner">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://pic.imgdb.cn/item/63ba7f5cbe43e0d30ed4dad0.jpg">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/img/banner.png">
     <!-- banner cover end -->
     
 
@@ -224,10 +228,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            The article archive
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            云间连下榻，<br>天上接行杯。
+                            算法分析与设计复习（oj和作业题目）
                         </h1>
 
                         
@@ -237,7 +241,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        categories
+                                        2025
                                     </span>
                                 </li>
                             </ul>
@@ -352,159 +356,174 @@
             
             <div class="trm-page-content col-lg-8">
                 <div id="trm-content" class="trm-content">
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="trm-tag-list"><li class="trm-tag-list-item "><a class="category-list-link" href="/categories/%E5%85%AB%E8%82%A1/">八股</a><span class="category-list-count">（1）</span></li><li class="trm-tag-list-item "><a class="category-list-link" href="/categories/%E5%8A%9B%E6%89%A3/">力扣</a><span class="category-list-count">（1）</span></li><li class="trm-tag-list-item "><a class="category-list-link" href="/categories/%E6%98%A5%E6%8B%9B/">春招</a><span class="category-list-count">（1）</span></li><li class="trm-tag-list-item "><a class="category-list-link" href="/categories/%E7%A0%94%E7%A9%B6%E7%94%9F/">研究生</a><span class="category-list-count">（7）</span></li><li class="trm-tag-list-item "><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">（1）</span></li></ul>
-                
-            </div>
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            01/02
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            19:56
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            北冥
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h1><h2 id="1-Longest-Balance-Substring"><a href="#1-Longest-Balance-Substring" class="headerlink" title="1. Longest Balance Substring"></a>1. Longest Balance Substring</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>A string is called “balanced” if, for every letter that appears in the string, both its uppercase and lowercase forms are present at least once. For example, aabAB is a balanced string, while abB is not. Given a string s, return the longest balanced substring of s.</p>
+<h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><p>（1）Modeling<br>该问题即要求找到满足下述条件的最长子串：每个出现在该子串中的字母，都要同时包含它的小写和大写形式。<br>（2）Algorithm description</p>
+<p>采用分治法进行解题:</p>
+<ol>
+<li>对于给定字符串，遍历该串构建哈希集合，之后检查出现在字符串中的每一个字母，直到找到第一个不符合平衡条件的字母（若没这样的字母，则说明原字符串即为最长平衡子串）</li>
+<li>则包含该字母的子串一定不是平衡子串，所以以该字母为分割点，将字符串分为左右两个子串</li>
+<li>递归地在这两个子串上继续寻找最长的平衡子串，直到子串长度小于2。</li>
+<li>返回所找到的最长平衡子串。</li>
+</ol>
+<p>（3）Time complexity<br>对于长度为﻿的字符串﻿：<br>构建哈希集合并判断一个子串是否平衡的时间复杂度为$O(n)﻿$，根据递归深度，最好情况时间复杂度为$$O(n{logn})$$﻿，最坏情况时间复杂度为﻿$$O(n^{2})$$。<br>（4）Space complexity<br>由于字母数有限，构建哈希集合所需空间复杂度为常数级，根据递归深度，最好情况空间复杂度为$$O{logn}$$﻿，最坏情况空间复杂度为$$O(n)$$﻿。</p>
+<h2 id="2-Cutting-Bamboo-Poles"><a href="#2-Cutting-Bamboo-Poles" class="headerlink" title="2. Cutting Bamboo Poles"></a>2. Cutting Bamboo Poles</h2><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>A farmer has n bamboo poles of different lengths l1, l2, …, ln. He needs to cut these poles into m bamboo poles of the same length to build a raft. Find the maximum possible length of each bamboo pole for the raft.</p>
+<h3 id="答案-1"><a href="#答案-1" class="headerlink" title="答案"></a>答案</h3><p>（1）Modeling</p>
+<ul>
+<li>将每根竹竿看作一个数组元素，数组中的每个元素表示竹竿的长度。</li>
+<li>我们需要找到一个长度﻿，使得能够从所有竹竿中砍出﻿根长度为﻿的竹竿， ﻿越长越好。</li>
+<li>这可以建模为一个优化问题：在最小长度和最大长度之间进行二分搜索，以找到能够砍出﻿根相同长度竹竿的最大长度﻿。</li>
+</ul>
+<p>（2）Algorithm description</p>
+<ol>
+<li>初始化：设定一个搜索范围，最小值为$0$﻿，最大值为所有竹竿中的最大长度的下取整。先判断这个长度能否满足题目要求，若能则结束，若不能则进行二分搜索。</li>
+<li>二分搜索：在这个范围内，通过下取整的方式计算选择中间值$mid$﻿，计算能够砍出的竹竿数。如果可以砍出至少﻿$m$根长度为﻿的竹竿，设当前﻿为$mid$最小值，继续在右半部分（较大值）搜索；否则设当前$mid$﻿为最大值，继续在左半部分（较小值）搜索。</li>
+<li>判断条件：在每次二分搜索中，计算可以从每根竹竿中砍出的竹竿数，累加判断是否能够满足$m$根竹竿。</li>
+<li>终止条件：上述操作保证最小值都能满足题意，最大值都不能满足题意，当搜索范围收窄到无法继续，即区间的最小值与最大值仅相差﻿时，当前的最小值即为可以切出的最大长度。</li>
+</ol>
+<p>（3）Time complexity<br>二分搜索时间复杂度为﻿$O(log(MaxLen))$，其中$$MaxLen$$为最长竹竿的长度。对于每一个计算得到的中间值﻿$$mid$$，需要遍历所有$$n$$﻿根竹竿以判断是否能至少砍出﻿$$m$$根该长度的竹竿来制作竹筏，时间复杂度为$O(n)$﻿，所以总的时间复杂度为﻿$O(nlog(MaxLen))$。<br>（4）Space complexity<br>只需要常数空间存储搜索范围的边界值和当前的最大长度，存储输入的每根竹竿的长度需要﻿$O(n)$空间，所以总的空间复杂度为$O(n)$。﻿</p>
+<h2 id="3-Multiple-Calculations"><a href="#3-Multiple-Calculations" class="headerlink" title="3. Multiple Calculations"></a>3. Multiple Calculations</h2><h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>Given a string s consisting of digits and operators +, − and ∗, return all possible results from calculating the different possible ways to group the numbers and operators.<br>Example:<br>Input: s &#x3D; ”2<em>3-4</em>5”<br>Output: -34, -14, -10, -10, 10<br>Explanation:<br>(2*(3-(4<em>5))) &#x3D; -34<br>((2</em>3)-(4<em>5)) &#x3D; -14<br>((2</em>(3-4))<em>5) &#x3D; -10<br>(2</em>((3-4)<em>5)) &#x3D; -10<br>(((2</em>3)-4)*5) &#x3D; 10</p>
+<h3 id="答案-2"><a href="#答案-2" class="headerlink" title="答案"></a>答案</h3><p>（1）Modeling</p>
+<p>这道题目可以用分治递归思想去考虑，可以将每一个运算符作为表达式的左右两部分的分割部位，将问题拆分成相同的子问题，再去分别递归左右两部分的所有可能结果，最后所有结果通过运算符组合起来。</p>
+<p>（2）Algorithm description</p>
+<ol>
+<li>初始化：给定一个表达式字符串，递归处理不同的运算符组合</li>
+<li>递归分解：遍历字符串中的每个运算符，将字符串分为运算符左侧和右侧两部分，分别递归两部分计算它们的结果</li>
+<li>递归终止：在递归中遇到当前字符串不包含运算符，说明是一个数字，直接返回为结果，作为递归的终止条件</li>
+<li>合并结果：当左右两部分的所有可能结果计算完成后，根据当前运算符对它们进行运算，将结果存入列表并返回。</li>
+</ol>
+<p>（3）Time complexity<br>每个运算符都可能成为递归的分割点，表达式可以划分为左右两部分进行递归，生成的递归树近似于完全二叉树，最多会有﻿$O(2^{n})$个不同的计算结果，其中$n$是运算符的数量。此外，每次组合左右两部分的结果的时间复杂度为﻿$O(m^{2})$，所以总的时间复杂度是：$O(m^{2} * 2^{n})$</p>
+<p>（4)Space complexity<br>递归的最大深度取决于表达式中的运算符数量。假设表达式有$n$个运算符，那么递归的最大深度为﻿$O(n)$,每个子表达式的结果都会被储存。由于递归的分治方法，会生成接近$O(2^{n})$个子表达式，所以总的空间复杂度为：$O(2^{n})$﻿</p>
+<h2 id="4-N-sum"><a href="#4-N-sum" class="headerlink" title="4. N-sum"></a>4. N-sum</h2><h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>There is an array $B[0..n − 1]$ with n elements, where each element of B is an integer in$ [0, n]$ (the elements are not necessarily different). You want to know if there exist n indices $i_1$, $i_2$…..$i_n$ (not necessarily different) such that </p>
+<p>$\sum_{j&#x3D;1}^{n} B[ij] $&#x3D; m<br>Where m is an integer in $[0, n^2]$.<br>Design an $O(n^2 log n)$ time algorithm for this problem. You do not need to return the indices; just yes or no is enough.<br>Hint: elements can be encoded using exponents!</p>
+<h3 id="答案-3"><a href="#答案-3" class="headerlink" title="答案"></a>答案</h3><p>(1)Modeling<br>定义<br>$p(x) &#x3D; xB[0] + xB[1] + … + xB[n−1]$<br>注意到<br>$p(x)n$ 的每一项为 $\prod_{j&#x3D;1}^{n}x^{B[i_{j}]}&#x3D;x^{\sum_{j&#x3D;1}^{n}{B[i_{j}]}}$，因此我们只需要检查 p(x)n 是否包含 xm 这一项即可。</p>
+<ol>
+<li>Algorithm description<br>令 $p(x) :&#x3D; \sum_{j&#x3D;1}^{n}x^{B[j]}$ 。<br>令<br>q(x) :&#x3D; p(x)n, 并使用FFT计算。</li>
+</ol>
+<p>检查<br>q 中 xm 的系数是否为0。</p>
+<ol>
+<li>Time complexity<br>  FFT的时间复杂度为 $O(nlogn)$, 则做 $n − 1$ 次FFT的时间复杂度为 $O(n^2logn)$ 。</li>
+<li>Space complexity<br>  FFT的空间复杂度为 $O(n)$ 。</li>
+</ol>
+<h2 id="5-Nearest-Point"><a href="#5-Nearest-Point" class="headerlink" title="5. Nearest Point"></a>5. Nearest Point</h2><h3 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a><a target="_blank" rel="noopener" href="http://bailian.openjudge.cn/practice/3658?lang=en_US">题目</a></h3><h3 id="答案-4"><a href="#答案-4" class="headerlink" title="答案"></a>答案</h3>
+</article>
+    
+    
 
-<!-- history -->
-
-<div class="row">
+</div>
+<div class="trm-post-next-prev row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                研究生
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2025/01/02/course_ctf/" class="trm-cover-frame trm-anima-link">
             
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2025/01/02/review_algorithm/" class="trm-anima-link">
-                                    算法分析与设计复习（oj和作业题目）
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
+            
+                <div class="trm-cover-img" data-random-img></div>
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                    研究生
+                </a>
             </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2025/01/02/course_ctf/" class="trm-anima-link">
-                                    web安全技术ctf
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2024/12/11/Matrix_job/" class="trm-anima-link">
-                                    矩阵分析与应用大作业
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2024/12/05/Security_network/" class="trm-anima-link">
-                                    网络协议安全大作业
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2024/11/26/network/" class="trm-anima-link">
-                                    计算机网络大作业
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2024/11/13/Papter_reading/" class="trm-anima-link">
-                                    论文阅读记录
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/2024/09/30/comment_course/" class="trm-anima-link">
-                                    研一课程评价
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
+            <h5>
+                <a href="/2025/01/02/course_ctf/" class="trm-anima-link">
+                    web安全技术ctf
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>25/01/02</li>
+                <li>15:08</li>
+                
+                    <li>727</li>
+                
+                
+                    <li>2</li>
+                
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
+    
 
+    <div id="giscus-wrap" class="trm-card trm-scroll-animation comment-container"></div>
+<script data-swup-reload-script>
+    function loadGiscus() {
+        let nowTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+        const config = {
+            src: 'https://giscus.app/client.js',
+            "data-repo": 'amour233/giscus',
+            "data-repo-id": 'R_kgDOLfPsGA',
+            "data-category": 'Announcements',
+            "data-category-id": 'DIC_kwDOLfPsGM4Cd6e0',
+            "data-mapping": 'title',
+            "data-reactions-enabled": '1',
+            "data-emit-metadata": '0',
+            "data-theme": nowTheme,
+            "data-lang": 'zh-CN',
+            crossorigin: "anonymous",
+            async: true
+        }
+        let ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+        document.getElementById('giscus-wrap').insertAdjacentElement('afterbegin', ele)
+    }
 
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
+    function changeGiscusTheme() {
+        let theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
 
+        function sendMessage(message) {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return;
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
 
+        sendMessage({
+            setConfig: {
+                theme: theme
+            }
+        });
+    }
+
+    loadGiscus();
+</script>
 
 
 
@@ -548,9 +567,29 @@
 
             
 
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="分治"><a rel="nofollow" class="trm-toc-link" href="#分治"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">分治</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="1. Longest Balance Substring"><a rel="nofollow" class="trm-toc-link" href="#1-Longest-Balance-Substring"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">1. Longest Balance Substring</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="2. Cutting Bamboo Poles"><a rel="nofollow" class="trm-toc-link" href="#2-Cutting-Bamboo-Poles"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">2. Cutting Bamboo Poles</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-1"><span class="trm-toc-number">1.2.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-1"><span class="trm-toc-number">1.2.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="3. Multiple Calculations"><a rel="nofollow" class="trm-toc-link" href="#3-Multiple-Calculations"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">3. Multiple Calculations</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-2"><span class="trm-toc-number">1.3.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-2"><span class="trm-toc-number">1.3.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="4. N-sum"><a rel="nofollow" class="trm-toc-link" href="#4-N-sum"><span class="trm-toc-number">1.4.</span> <span class="trm-toc-text">4. N-sum</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-3"><span class="trm-toc-number">1.4.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-3"><span class="trm-toc-number">1.4.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="5. Nearest Point"><a rel="nofollow" class="trm-toc-link" href="#5-Nearest-Point"><span class="trm-toc-number">1.5.</span> <span class="trm-toc-text">5. Nearest Point</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-4"><span class="trm-toc-number">1.5.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-4"><span class="trm-toc-number">1.5.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li></ol></li></ol>
+      </div>
+    </div>
+
             
 <div class="trm-fixed-container">
     
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
         <div class="trm-fixed-btn hidden-md" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
@@ -612,6 +651,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 		
