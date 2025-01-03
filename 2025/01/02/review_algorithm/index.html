@@ -15,7 +15,7 @@
 <meta property="og:description" content="分治1. Longest Balance Substring题目A string is called “balanced” if, for every letter that appears in the string, both its uppercase and lowercase forms are present at least once. For example, aabAB is a">
 <meta property="og:locale">
 <meta property="article:published_time" content="2025-01-02T11:56:52.202Z">
-<meta property="article:modified_time" content="2025-01-02T13:10:46.660Z">
+<meta property="article:modified_time" content="2025-01-03T08:33:47.533Z">
 <meta property="article:author" content="北冥">
 <meta name="twitter:card" content="summary">
 
@@ -65,7 +65,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"北冥","root":"/","typed_text":["believe yourself everytime"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","apple_touch_icon":null,"webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！","appleTouchIcon":"log.svg","showText":"(/≧▽≦/)欢迎回来！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":false,"title":"default","height_limit":200},"toc":{"post_title":false},"live_time":{"start_time":"03/11/2024 9:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"covers":["http://www.horosama.com/api/img/pc/pc_1.jpg","http://www.horosama.com/api/img/pc/pc_2.jpg","http://www.horosama.com/api/img/pc/pc_3.jpg","https://tc.dhmip.cn/imgs/2024/03/14/01347010cb647499.jpg","https://tc.dhmip.cn/imgs/2024/03/14/0b072f1593960745.jpg","https://tc.dhmip.cn/imgs/2024/03/14/1f0d740bcbb4adf7.jpeg","https://images.wallpaperscraft.com/image/single/girl_hood_ears_1013418_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_cloak_hood_984627_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_umbrella_anime_141156_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_gesture_jewelry_966884_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_fish_1005833_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_glance_eyes_1157756_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_neko_heterochromia_1162566_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_googles_anime_1156985_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_cute_ball_127642_1280x720.jpg","https://images.wallpaperscraft.com/image/single/cat_animal_smoke_1190449_1280x720.jpg","https://images.wallpaperscraft.com/image/single/kitten_lying_baby_115235_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_anime_food_671_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_hair_849710_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_smile_dress_1064277_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_headphones_anime_1079499_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_horns_forest_1066754_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_demon_horns_1085787_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_blush_sadness_492077_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_snowman_snow_578103_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_dog_flowers_462265_1280x720.jpg","https://images.wallpaperscraft.com/image/single/girl_arch_chair_204932_1280x720.jpg","https://images.wallpaperscraft.com/image/single/magician_dragon_art_131303_1280x720.jpg","https://images.wallpaperscraft.com/image/single/deer_planet_art_129712_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sakura_flowers_bloom_125940_1280x720.jpg","https://images.wallpaperscraft.com/image/single/chip_circuit_processor_140251_1280x720.jpg","https://images.wallpaperscraft.com/image/single/keyboard_laptop_gradient_203739_1280x720.jpg","https://images.wallpaperscraft.com/image/single/binary_code_code_numbers_147523_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_galaxy_universe_121293_1280x720.jpg","https://images.wallpaperscraft.com/image/single/space_planets_takeoff_96455_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_light_spots_86643_1280x720.jpg","https://images.wallpaperscraft.com/image/single/starry_sky_boat_reflection_125803_1280x720.jpg","https://images.wallpaperscraft.com/image/single/treble_clef_musical_notes_multicolored_121263_1280x720.jpg","https://images.wallpaperscraft.com/image/single/saxophone_lighting_abstraction_121900_1280x720.jpg","https://images.wallpaperscraft.com/image/single/wolf_howl_silhouette_128733_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sakura_rainbow_art_127295_1280x720.jpg","https://images.wallpaperscraft.com/image/single/leaves_twigs_needles_92119_1280x720.jpg","https://images.wallpaperscraft.com/image/single/ladybug_drop_surface_106249_1280x720.jpg","https://images.wallpaperscraft.com/image/single/drop_liquid_closeup_121838_1280x720.jpg","https://images.wallpaperscraft.com/image/single/drops_rain_glass_120628_1280x720.jpg","https://images.wallpaperscraft.com/image/single/grass_sunlight_sunset_90198_1280x720.jpg","https://images.wallpaperscraft.com/image/single/landscape_mountains_sun_140434_1280x720.jpg","https://images.wallpaperscraft.com/image/single/forest_fog_trees_126479_1280x720.jpg","https://images.wallpaperscraft.com/image/single/bridge_river_flow_100663_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sea_sunset_art_131736_1280x720.jpg","https://images.wallpaperscraft.com/image/single/eruption_lava_volcano_45542_1280x720.jpg","https://images.wallpaperscraft.com/image/single/sea_sunset_horizon_131804_1280x720.jpg","https://images.wallpaperscraft.com/image/single/forest_fog_trees_128751_1280x720.jpg","https://images.wallpaperscraft.com/image/single/night_city_aerial_view_lights_city_134887_1280x720.jpg","https://images.wallpaperscraft.com/image/single/city_aerial_view_road_156925_1280x720.jpg","https://images.wallpaperscraft.com/image/single/city_night_panorama_117682_1280x720.jpg","https://images.wallpaperscraft.com/image/single/mclaren_p1_gtr_mclaren_p1_mclaren_128793_1280x720.jpg","https://images.wallpaperscraft.com/image/single/hologram_scheme_scifi_139294_1280x720.jpg","https://images.wallpaperscraft.com/image/single/computer_light_neon_50557_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planet_galaxy_universe_121293_1280x720.jpg","https://images.wallpaperscraft.com/image/single/planets_galaxy_stars_146448_1280x720.jpg"]};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-01-02 21:10:46"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-01-03 16:33:47"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.4" id="trm-switch-style">
@@ -423,10 +423,96 @@
 </ol>
 <p>检查<br>q 中 xm 的系数是否为0。</p>
 <ol>
-<li>Time complexity<br>  FFT的时间复杂度为 $O(nlogn)$, 则做 $n − 1$ 次FFT的时间复杂度为 $O(n^2logn)$ 。</li>
-<li>Space complexity<br>  FFT的空间复杂度为 $O(n)$ 。</li>
+<li>Time complexity<br> FFT的时间复杂度为 $O(nlogn)$, 则做 $n − 1$ 次FFT的时间复杂度为 $O(n^2logn)$ 。</li>
+<li>Space complexity<br> FFT的空间复杂度为 $O(n)$ 。</li>
 </ol>
-<h2 id="5-Nearest-Point"><a href="#5-Nearest-Point" class="headerlink" title="5. Nearest Point"></a>5. Nearest Point</h2><h3 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a><a target="_blank" rel="noopener" href="http://bailian.openjudge.cn/practice/3658?lang=en_US">题目</a></h3><h3 id="答案-4"><a href="#答案-4" class="headerlink" title="答案"></a>答案</h3>
+<h2 id="5-Nearest-Point"><a href="#5-Nearest-Point" class="headerlink" title="5. Nearest Point"></a>5. Nearest Point</h2><h3 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a><a target="_blank" rel="noopener" href="http://bailian.openjudge.cn/practice/3658?lang=en_US">题目</a></h3><h3 id="答案-4"><a href="#答案-4" class="headerlink" title="答案"></a>答案</h3><p>(1) Modeling</p>
+<ul>
+<li>可用分治策略：将点按﻿坐标排序，然后分别处理左右两边和中间部分。</li>
+<li>在中间部分，设﻿为左右两边中更小的结果，那便只有处于距中间线﻿以内的点才有更新结果的机会。</li>
+<li>搜索中间部分时，可按﻿坐标排序并依据﻿进行剪枝，此排序利用分治过程进行归并排序以减少运算。</li>
+</ul>
+<p>(2) Algorithm description</p>
+<ol>
+<li><p>将station和agent的坐标合并成一个点集﻿$point$。</p>
+</li>
+<li><p>按﻿坐标对点集进行排序。</p>
+</li>
+<li><p>分治法求解最近点对﻿:<br>  a. 边界条件：当点的数量为﻿1时，返回距离无穷大。<br>  b. 递归：将点集按﻿$x$坐标分成左右两部分，递归计算左右两部分的最小距离分别为<br>  ﻿$F(l, mid)$、$F(mid + 1, r)﻿$。<br>  c. 按﻿$y$坐标，执行归并排序的合并操作。（此时按$x$﻿递归的操作已经完成，重新排序不会影响递归）<br>  d. 取中间线$point &#x3D; (point[mid].x + point[mid + 1].x)&#x2F;2$﻿，将﻿$x$坐标距离中<br>  间线小于$delta &#x3D; min(F(l, mid), F(mid + 1, r))$﻿的点加入point_piovt﻿。<br>  e. 利用$y$﻿坐标剪枝搜索﻿中stations和agents间的最小距离dis_pivot。</p>
+</li>
+</ol>
+<p>  f. 返回值：则区间内的最小距离﻿$F(l, r)$为delta﻿、dis_piovt﻿中的较小值。</p>
+<ol start="4">
+<li>剪枝搜索Search(point_piovt)﻿:</li>
+</ol>
+<p>  a. 枚举$node_i$﻿。<br>  b. 嵌套枚举﻿$node_j$（从﻿后一个$node_i$开始）。<br>  i. 若$node_j.y - node_i.y &gt;&#x3D; delta$﻿，则剪枝，即break掉枚举$node_j$﻿。<br>  ii. 根据$node.tag$﻿，若﻿$node_i$和﻿$node_j$分别为station和agent才计算并更新最<br>  小值。<br>  iii. 返回值：若搜索不到则返回无穷大，否则返回搜索到的最小值。</p>
+<ol start="5">
+<li>最终结果: $F(1, 2N)$﻿。<br>  (3) Time complexity<br>  易见步骤2、3.c、3.d的时间复杂度分别为$O(NlogN)﻿、O(n)﻿、O(n)$﻿。<br>  证：剪枝搜索$Search(n)$﻿的复杂度为﻿$O(n)$</li>
+</ol>
+<p>  a.根据剪枝规则可知，Search函数中，对每个点$node_i$﻿的搜索空间为$2delta*delta$﻿矩形范围。<br>  b.由﻿定义可知在该范围内，绝不会超过8个点。</p>
+<p>  已知枚举$node_i$﻿的复杂度为$O(n)$﻿，则证。<br>  分治法时间复杂度﻿:$F(n):O(n) + 2F(n&#x2F;2)﻿ → O(nlogn)﻿$。<br>  主函数: ﻿$O(N) + O(NlogN) + F(2N) → O(2NlogN) $﻿。<br>  则总体复杂度为﻿$O(NlogN)$。<br>  (4) Space complexity<br>  开数组计算在递归操作后，因此为﻿$O(N)$。</p>
+<h2 id="6-A-unique-permutation"><a href="#6-A-unique-permutation" class="headerlink" title="6. A unique permutation"></a>6. A unique permutation</h2><h3 id="题目-5"><a href="#题目-5" class="headerlink" title="题目"></a><a target="_blank" rel="noopener" href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2070#google_vignette">题目</a></h3><h3 id="答案-5"><a href="#答案-5" class="headerlink" title="答案"></a>答案</h3><ol>
+<li>Modeling</li>
+</ol>
+<ul>
+<li>维护一个﻿的数列$0$ ~ $n-1$，使其选出长度大于3的子序列（可以不连续）都不能是等差数列。</li>
+<li>正难则反，分析发现一个非法的序列至少包含一个长度为3的等差数列，可以将原序列拆分成两个等差数列，得知两序列中间部分要么是两个偶数一个奇数，要么是两个奇数一个偶数，判断这一部分一定是合法的。</li>
+<li>所以每次将序列拆分成两段不合法等差序列时，会构造出两序列中间部分的合法区间。</li>
+<li>因此使用分治法，重复这一步，直至将整个区间处理为合法，当处理区间长度小于2时就不必拆分了。</li>
+<li>注：此题答案不唯一，构造合理即可</li>
+</ul>
+<ol start="2">
+<li>Algorithm description</li>
+</ol>
+<ul>
+<li><p>计算区间的中点$mid &#x3D; (l + r) &#x2F; 2$ ﻿，将当前区间拆分成左右两部分$[l, mid] ﻿ 和[mid + 1, r]$。</p>
+</li>
+<li><p>判断当前区间 $[l, r]$的长度，如果小于等于 2，则认为不再需要拆分和处理，直接返回。</p>
+</li>
+<li><p>初始化 ﻿$t_1和t_2$，分别为当前区间的起始值 ﻿ $a[l]和 ﻿a[l + 1]$，用于构造左右部分的合法等差序列。</p>
+</li>
+<li><p>构造左半部分$[l, mid]$ ﻿：从 l 开始赋值，每次步长为 $p_l$﻿，逐渐递增赋值给$a[i]$ ﻿，构造出合法的等差序列。</p>
+</li>
+<li><p>构造右半部分 $[mid + 1, r]﻿$：从$mid + 1$ ﻿ 开始赋值，同样每次步长为$ p_l * 2$﻿，逐渐递增，形成右半部分的合法序列。</p>
+</li>
+<li><p>递归调用：对左右两部分再进行递归处理，步长 $p_l$﻿ 每次翻倍 $p_l * 2$﻿，这样每一层递归构造的序列递增速度加快，保证等差性。</p>
+</li>
+</ul>
+<ol start="3">
+<li>Time complexity</li>
+</ol>
+<ul>
+<li>$O(NlogN)$</li>
+<li>分析：最外层是简单的二分递归逻辑，每层遍历时步长 ﻿$p_l$翻倍，时长减半。</li>
+</ul>
+<ol start="4">
+<li>Space complexity</li>
+</ol>
+<ul>
+<li>$O(N)$</li>
+<li>分析：只需要存储一次序列 ﻿，通过移动指针确定递归查找范围，并在原序列上修改即可。</li>
+</ul>
+<h2 id="7-Lost-items"><a href="#7-Lost-items" class="headerlink" title="7. Lost items"></a>7. Lost items</h2><h3 id="题目-6"><a href="#题目-6" class="headerlink" title="题目"></a><a target="_blank" rel="noopener" href="https://vjudge.net/problem/SPOJ-BURGLARY/origin">题目</a></h3><h3 id="答案-6"><a href="#答案-6" class="headerlink" title="答案"></a>答案</h3><p>（1）Modeling<br>穷举法的时间复杂度为$O(N*2N)$，当N较大时复杂度太高。因此我们可以使用meet in the middle方法，将问题分解为两个较小的子问题来解决。在该问题中，我们可以把物品集合分成两半，分别计算两部分所有可能的重量组合。对于一个集合中的每个子集，在另一个集合中找配对的子集，使得两个子集的重量和等于D。</p>
+<p>（2）Algorithm description<br>1.物品集合分为两部分：集合A包含前半部分物品，集合B包含后半部分物品，每个集合的<br>大小为 N&#x2F;2。<br>2.枚举两部分集合的所有组合：</p>
+<ul>
+<li>对于集合A，枚举所有可能的子集，计算每个子集的总重量，并记录下这些重量及其对应的物品数量。</li>
+<li>对于集合B，做相同操作，计算所有可能的子集重量。</li>
+</ul>
+<p>3.寻找满足条件的组合：<br>为了快速查找集合B中满足条件的子集，可以对集合B的子集总重量进行排序，然后使用二分查找来高效找到合适的配对。<br>4.分析结果：</p>
+<ul>
+<li>如果找到一个配对子集，计算其物品数量。</li>
+<li>如果有多个组合满足 $WA+WB&#x3D;DW_A + W_B &#x3D; DWA+WB&#x3D;D$，输出“AMBIGIOUS”。</li>
+<li>如果找不到满足条件的组合，则输出 “IMPOSSIBLE”。</li>
+</ul>
+<p>(3) Time complexity<br>1.枚举子集的复杂度：<br>集合A和集合B各有(N&#x2F;2)个物品，每个集合有$2^{N&#x2F;2}$种可能的子集，计算所有子集的和需要 $2^{N&#x2F;2}$的时间，总复杂度为$O(2*2^{N&#x2F;2}) &#x3D; O(2^{N&#x2F;2})$。<br>2.排序：<br>B集合有$2^{N&#x2F;2}$个子集，对B集合排序，复杂度为$O(2^{N&#x2F;2}log2^{N&#x2F;2}) &#x3D; O(2^{N&#x2F;2}N)$。<br>3.二分查找</p>
+<p>A集合有$2^{N&#x2F;2}$个子集，对每个子集进行一次二分查找的复杂度为$O(log2^{N&#x2F;2})&#x3D;O(N)$。总的时间复杂度即，上述步骤的时间复杂度之和$O(2^{N&#x2F;2}N)$。相比穷举法指数复杂度的指数从N降低到N&#x2F;2。</p>
+<p>(4) Space complexity</p>
+<ul>
+<li>分治法将物品集合分为两部分，每一部分枚举所有可能的子集，并将每个子集的总重量存储下来，以便后续进行匹配和查找。因此，存这些中间结果是空间复杂度的主要来源。</li>
+<li>输入存储：同样需要O(N)的空间存储N个物品的重量。</li>
+<li>子集存储：集合A和集合B都有$2^{N&#x2F;2}$个物品，都需要$O(2^{N&#x2F;2})$的空间保存子集和。所以总的空间复杂度是$O(2^{N&#x2F;2})$。</li>
+</ul>
+<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1>
 </article>
     
     
@@ -575,7 +661,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="分治"><a rel="nofollow" class="trm-toc-link" href="#分治"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">分治</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="1. Longest Balance Substring"><a rel="nofollow" class="trm-toc-link" href="#1-Longest-Balance-Substring"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">1. Longest Balance Substring</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="2. Cutting Bamboo Poles"><a rel="nofollow" class="trm-toc-link" href="#2-Cutting-Bamboo-Poles"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">2. Cutting Bamboo Poles</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-1"><span class="trm-toc-number">1.2.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-1"><span class="trm-toc-number">1.2.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="3. Multiple Calculations"><a rel="nofollow" class="trm-toc-link" href="#3-Multiple-Calculations"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">3. Multiple Calculations</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-2"><span class="trm-toc-number">1.3.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-2"><span class="trm-toc-number">1.3.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="4. N-sum"><a rel="nofollow" class="trm-toc-link" href="#4-N-sum"><span class="trm-toc-number">1.4.</span> <span class="trm-toc-text">4. N-sum</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-3"><span class="trm-toc-number">1.4.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-3"><span class="trm-toc-number">1.4.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="5. Nearest Point"><a rel="nofollow" class="trm-toc-link" href="#5-Nearest-Point"><span class="trm-toc-number">1.5.</span> <span class="trm-toc-text">5. Nearest Point</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-4"><span class="trm-toc-number">1.5.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-4"><span class="trm-toc-number">1.5.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li></ol></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="分治"><a rel="nofollow" class="trm-toc-link" href="#分治"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">分治</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="1. Longest Balance Substring"><a rel="nofollow" class="trm-toc-link" href="#1-Longest-Balance-Substring"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">1. Longest Balance Substring</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="2. Cutting Bamboo Poles"><a rel="nofollow" class="trm-toc-link" href="#2-Cutting-Bamboo-Poles"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">2. Cutting Bamboo Poles</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-1"><span class="trm-toc-number">1.2.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-1"><span class="trm-toc-number">1.2.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="3. Multiple Calculations"><a rel="nofollow" class="trm-toc-link" href="#3-Multiple-Calculations"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">3. Multiple Calculations</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-2"><span class="trm-toc-number">1.3.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-2"><span class="trm-toc-number">1.3.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="4. N-sum"><a rel="nofollow" class="trm-toc-link" href="#4-N-sum"><span class="trm-toc-number">1.4.</span> <span class="trm-toc-text">4. N-sum</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-3"><span class="trm-toc-number">1.4.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-3"><span class="trm-toc-number">1.4.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="5. Nearest Point"><a rel="nofollow" class="trm-toc-link" href="#5-Nearest-Point"><span class="trm-toc-number">1.5.</span> <span class="trm-toc-text">5. Nearest Point</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-4"><span class="trm-toc-number">1.5.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-4"><span class="trm-toc-number">1.5.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="6. A unique permutation"><a rel="nofollow" class="trm-toc-link" href="#6-A-unique-permutation"><span class="trm-toc-number">1.6.</span> <span class="trm-toc-text">6. A unique permutation</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-5"><span class="trm-toc-number">1.6.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-5"><span class="trm-toc-number">1.6.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="7. Lost items"><a rel="nofollow" class="trm-toc-link" href="#7-Lost-items"><span class="trm-toc-number">1.7.</span> <span class="trm-toc-text">7. Lost items</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="题目"><a rel="nofollow" class="trm-toc-link" href="#题目-6"><span class="trm-toc-number">1.7.1.</span> <span class="trm-toc-text">题目</span></a></li><li class="trm-toc-item trm-toc-level-3" title="答案"><a rel="nofollow" class="trm-toc-link" href="#答案-6"><span class="trm-toc-number">1.7.2.</span> <span class="trm-toc-text">答案</span></a></li></ol></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="动态规划"><a rel="nofollow" class="trm-toc-link" href="#动态规划"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">动态规划</span></a></li></ol>
       </div>
     </div>
 
